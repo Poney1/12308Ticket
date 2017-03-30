@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_itemfillinorder_seatname"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="二等座"
+        android:textColor="@color/c_666666"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_itemfillinorder_seatnum"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="300张"
+        android:textColor="@color/c_666666"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_itemfillinorder_seatprice"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="¥359.0"
+        android:textColor="@color/c_666666"
+        android:textSize="12sp"/>
+
+    <CheckBox
+        android:id="@+id/cb_itemfillinorder_ischoosed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_20px"
+        android:layout_gravity="center_vertical"
+        android:button="@null"
+        android:drawableLeft="@drawable/btn_checkbox"
+        android:checked="true"/>
+</LinearLayout>

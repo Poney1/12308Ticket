@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingLeft="@dimen/app_space_side"
+    android:paddingRight="@dimen/app_space_side"
+    android:paddingTop="@dimen/app_space_side"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/img_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="0"
+        android:padding="4dp"
+        android:textColor="@color/app_style"
+        android:background="@drawable/shape_red_heart_circle"/>
+
+    <TextView
+        android:layout_marginLeft="4dp"
+        android:id="@+id/tv_content"
+        android:text="本线路为电子特价票"
+        android:layout_gravity="center_vertical"
+        android:textSize="12sp"
+        android:textColor="@color/c_666666"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

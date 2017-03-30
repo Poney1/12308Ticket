@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+
+    <include layout="@layout/title_bar_common"/>
+
+    <!--<include layout="@layout/layout_loading"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_background"
+                android:orientation="vertical">
+
+                <!--顶部车队电话-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_120px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_20px"
+                    android:paddingRight="@dimen/margin_20px"
+                    >
+
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_rentcarorderdetails_icon"
+                        android:layout_width="@dimen/margin_80px"
+                        android:layout_height="@dimen/margin_80px"
+                        fresco:actualImageScaleType="centerInside"
+                        android:layout_marginLeft="24dp"
+                        fresco:placeholderImage="@mipmap/icon_appoint_logo"
+                        fresco:roundAsCircle="true"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_rentcarorderdetails_fromcity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="深圳"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_36px"/>
+
+                            <TextView
+                                android:layout_width="@dimen/margin_50px"
+                                android:layout_height="@dimen/margin_2px"
+                                android:background="@color/c_333333"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_rentcarorderdetails_tocity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="广州"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_36px"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/margin_10px">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="商户："
+                                android:textColor="@color/c_999999"
+                                android:textSize="@dimen/textsize_24px"/>
+
+                            <TextView
+                                android:id="@+id/tv_rentcarorderdetails_buscom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="国信快捷车队"
+                                android:textColor="@color/c_999999"
+                                android:textSize="@dimen/textsize_24px"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_rentcarorderdetails_callbus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/rc_icon_driver_phone"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <!--出发时间，车站，价格等信息-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/margin_20px"
+                    android:paddingRight="@dimen/margin_20px">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_20px"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_rentcarorderdetails_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2月23日（周四）"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_32px"/>
+
+                            <TextView
+                                android:id="@+id/tv_rentcarorderdetails_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_20px"
+                                android:text="08:00~21:00出发"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/textsize_32px"/>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_20px"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_20px"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="@dimen/margin_32px"
+                                        android:layout_height="@dimen/margin_32px"
+                                        android:background="@drawable/bg_dest_start"
+                                        android:gravity="center"
+                                        android:text="始"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_24px"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_rentcarorderdetails_fromstation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/margin_20px"
+                                        android:gravity="center_vertical"
+                                        android:text="襄阳汽车总站"
+                                        android:textColor="@color/c_333333"
+                                        android:textSize="@dimen/textsize_32px"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_20px"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="@dimen/margin_32px"
+                                        android:layout_height="@dimen/margin_32px"
+                                        android:background="@drawable/bg_dest_end"
+                                        android:gravity="center"
+                                        android:text="终"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_24px"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_rentcarorderdetails_tostation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/margin_20px"
+                                        android:gravity="center_vertical"
+                                        android:text="合肥客运站"
+                                        android:textColor="@color/c_333333"
+                                        android:textSize="@dimen/textsize_32px"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_rentcarorderdetails_money"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="80"
+                                    android:textColor="@color/c_f03f3f"
+                                    android:textSize="@dimen/textsize_36px"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="元"
+                                    android:textColor="@color/c_f03f3f"
+                                    android:textSize="@dimen/textsize_24px"/>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/common_line"/>
+
+                    <TextView
+                        android:id="@+id/tv_rentcarorderdetails_cartype"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_60px"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:text="7座商务型-约租车整车"
+                        android:textColor="@color/c_999999"
+                        android:textSize="@dimen/textsize_24px"/>
+                </LinearLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <!--资费说明等-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/margin_20px"
+                    android:paddingRight="@dimen/margin_20px">
+
+                    <TextView
+                        android:id="@+id/tv_rentcarorderdetails_lineinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20px"
+                        android:text="本线路由【深圳市南山租赁公司】提供，请与联系人"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_24px"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20px"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="资费声明："
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/textsize_24px"/>
+
+                        <TextView
+                            android:id="@+id/tv_rentcarorderdetails_zfsm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="2"
+                            android:text="本线路由【深圳市南山租赁公司】提供，请与联系人本线路由【深圳市南山租赁公司】提供，"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/textsize_24px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_rentcarorderdetails_lineinfovisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_20px"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="服务标准："
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/textsize_24px"/>
+
+                            <TextView
+                                android:id="@+id/tv_rentcarorderdetails_fwbz"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="2"
+                                android:text="本线路由【深圳市南山租赁公司】提供，请与联系人"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/textsize_24px"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_20px"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="其他说明："
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/textsize_24px"/>
+
+                            <TextView
+                                android:id="@+id/tv_rentcarorderdetails_qtsm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="2"
+                                android:text="本线路由【深圳市南山租赁公司】提供，请与联系人"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/textsize_24px"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <ImageView
+                    android:id="@+id/iv_rentcarorderdetails_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/slt_appoint_down"/>
+
+                <!--等待接单 支付剩余时间-->
+                <LinearLayout
+                    android:id="@+id/ll_rentcarorderdetails_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="剩余"
+                        android:textColor="@color/c_666666"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_rentcarorderdetails_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@mipmap/rc_count_down_bg"
+                        android:gravity="center"
+                        android:text="01"
+                        android:textColor="@color/c_f03f3f"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="时"
+                        android:textColor="@color/app_text_color_gary"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_rentcarorderdetails_minute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/rc_count_down_bg"
+                        android:gravity="center"
+                        android:text="23"
+                        android:textColor="@color/app_style"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="分"
+                        android:textColor="@color/app_text_color_gary"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_rentcarorderdetails_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@mipmap/rc_count_down_bg"
+                        android:gravity="center"
+                        android:text="48"
+                        android:textColor="@color/app_style"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="秒"
+                        android:textColor="@color/app_text_color_gary"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_rentcarorderdetails_wait"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:src="@mipmap/rc_icon_state_waiting"/>
+
+                <TextView
+                    android:id="@+id/tv_rentcarorderdetails_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:gravity="center"
+                    android:text="订单取消"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/textsize_32px"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!--退款信息-->
+        <LinearLayout
+            android:id="@+id/ll_rentcarorderdetails_refundifo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_20px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="退款"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/textsize_32px"/>
+
+                <TextView
+                    android:id="@+id/tv_rentcarorderdetails_refundprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-60元"
+                    android:textColor="@color/c_f03f3f"
+                    android:textSize="@dimen/textsize_32px"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款单号："
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/textsize_24px"/>
+
+                <TextView
+                    android:id="@+id/tv_rentcarorderdetails_refundorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456789"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/textsize_24px"/>
+
+                <TextView
+                    android:id="@+id/tv_rentcarorderdetails_refunddate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016.03.12 12:33"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/textsize_24px"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_rentcarorderdetails_refundtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自住申请："
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/textsize_24px"/>
+
+                <TextView
+                    android:id="@+id/tv_rentcarorderdetails_refundrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="退还比例85%"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/textsize_24px"/>
+
+                <TextView
+                    android:id="@+id/tv_rentcarorderdetails_refundstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款中"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/textsize_24px"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--底部按钮-->
+        <Button
+            android:id="@+id/bt_rentcarorderdetails_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_color_orange"
+            android:paddingBottom="@dimen/margin_16px"
+            android:paddingTop="@dimen/margin_16px"
+            android:text="试试别的出行方式"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</LinearLayout>

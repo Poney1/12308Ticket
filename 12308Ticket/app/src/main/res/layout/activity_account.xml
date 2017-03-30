@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:mudo="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <include layout="@layout/layout_loading"/>
+
+    <include layout="@layout/common_line"/>
+
+    <LinearLayout
+        android:id="@+id/ll_account_icon"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_20px"
+        android:paddingRight="@dimen/margin_20px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="头像"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/margin_30px"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_account_icon"
+            android:layout_width="@dimen/margin_80px"
+            android:layout_height="@dimen/margin_80px"
+            fresco:actualImageScaleType="centerInside"
+            fresco:placeholderImage="@mipmap/my_pic"
+            fresco:roundAsCircle="true"
+            />
+    </LinearLayout>
+
+    <include layout="@layout/common_lpl"/>
+
+    <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+        android:id="@+id/pcl_account_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        mudo:text="姓名"
+        mudo:textinfo="张三"
+        mudo:textinfocolor="@color/c_333333"/>
+
+    <include layout="@layout/common_shortline"/>
+
+    <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+        android:id="@+id/pcl_account_certno"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        mudo:text="身份证号"
+        mudo:textinfo="443333333333"/>
+
+    <include layout="@layout/common_lpl"/>
+
+    <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+        android:id="@+id/pcl_account_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        mudo:text="手机号码"
+        mudo:textinfo="1588888888"/>
+
+    <include layout="@layout/common_shortline"/>
+
+    <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+        android:id="@+id/pcl_account_bind"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        mudo:text="账号绑定"/>
+
+    <include layout="@layout/common_lpl"/>
+
+    <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+        android:id="@+id/pcl_account_12306"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        mudo:text="12306账号管理"/>
+
+    <include layout="@layout/common_line"/>
+
+</LinearLayout>

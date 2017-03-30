@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f0f0f0"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/passenger_add_height"
+        android:layout_marginTop="@dimen/passenger_add_top"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/passenger_add_top"
+        android:paddingLeft="@dimen/passenger_add_padding_left"
+        android:paddingRight="@dimen/passenger_add_padding_left"
+        android:paddingTop="@dimen/passenger_add_top">
+
+        <TextView
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textColor="@color/app_text_color_gary"
+            android:textSize="@dimen/textsize_30px" />
+
+        <com.wxws.myticket.my.widgets.view.ClearEditText
+            android:id="@+id/et_passenger_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/passenger_name_required"
+            android:lines="1"
+            android:textColor="@color/c_333333"
+            android:textColorHint="@color/c_cccccc"
+            android:textCursorDrawable="@drawable/clear_blue_cursor"
+            android:textSize="@dimen/textsize_30px" />
+    </LinearLayout>
+
+    <View style="@style/split_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/passenger_add_height"
+        android:layout_marginTop="@dimen/passenger_add_top"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/passenger_add_top"
+        android:paddingLeft="@dimen/passenger_add_padding_left"
+        android:paddingRight="@dimen/passenger_add_padding_left"
+        android:paddingTop="@dimen/passenger_add_top">
+
+        <TextView
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="@string/passenger_identity_card"
+            android:textColor="@color/app_text_color_gary"
+            android:textSize="@dimen/textsize_30px" />
+
+        <com.wxws.myticket.my.widgets.view.ClearEditText
+            android:id="@+id/et_passenger_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/passenger_credentials_required"
+            android:lines="1"
+            android:maxLength="18"
+            android:textColor="@color/c_333333"
+            android:textColorHint="@color/c_cccccc"
+            android:textCursorDrawable="@drawable/clear_blue_cursor"
+            android:textSize="@dimen/textsize_30px" />
+    </LinearLayout>
+
+    <View style="@style/split_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/passenger_add_height"
+        android:layout_marginTop="@dimen/passenger_add_top"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/passenger_add_top"
+        android:paddingLeft="@dimen/passenger_add_padding_left"
+        android:paddingRight="@dimen/passenger_add_padding_left"
+        android:paddingTop="@dimen/passenger_add_top">
+
+        <TextView
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="@string/passenger_number"
+            android:textColor="@color/app_text_color_gary"
+            android:textSize="@dimen/textsize_30px" />
+
+        <com.wxws.myticket.my.widgets.view.ClearEditText
+            android:id="@+id/et_passenger_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/passenger_number_required"
+            android:maxLength="11"
+            android:inputType="number"
+            android:lines="1"
+            android:textColor="@color/c_333333"
+            android:textColorHint="@color/c_cccccc"
+            android:textCursorDrawable="@drawable/clear_blue_cursor"
+            android:textSize="@dimen/textsize_30px" />
+    </LinearLayout>
+
+    <View style="@style/split_line" />
+
+    <Button
+        android:id="@+id/btn_passenger_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slt_passenger_add"
+        android:enabled="false"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="165dp"
+        android:text="@string/passenger_sure" />
+</LinearLayout>

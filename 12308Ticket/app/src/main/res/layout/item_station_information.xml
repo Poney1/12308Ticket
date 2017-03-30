@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/c_ebebeb"
+    android:paddingBottom="@dimen/train_list_item_number_top"
+    android:paddingTop="@dimen/train_list_item_number_top">
+    <TextView
+        android:id="@+id/tv_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/train_list_adapter_order"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/train_list_item_desc_size" />
+
+    <TextView
+        android:id="@+id/tv_station_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/train_list_adapter_name"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/train_list_item_desc_size" />
+
+    <TextView
+        android:id="@+id/tv_arrive_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/train_list_adapter_arrive"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/train_list_item_desc_size" />
+
+    <TextView
+        android:id="@+id/tv_start_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/train_list_adapter_start"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/train_list_item_desc_size" />
+
+    <TextView
+        android:id="@+id/tv_wait_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/train_list_adapter_wait"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/train_list_item_desc_size" />
+
+</LinearLayout>

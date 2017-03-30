@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+
+    <!-- 边缘的颜色 -->
+    <stroke android:width="0.5dp"
+            android:color="@color/c_f03f3f"/>
+    <!-- android:radius 底部左右 弧形的半径 -->
+    <corners android:radius="@dimen/margin_19px"/>
+
+    <gradient android:endColor="#ffc8c8"
+              android:startColor="#ffc8c8"/>
+
+</shape>

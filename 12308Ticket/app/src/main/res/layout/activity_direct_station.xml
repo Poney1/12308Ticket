@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/title_bar_common" />
+
+    <include layout="@layout/layout_loading"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@mipmap/direct_order_default">
+
+                <ImageView
+                    android:id="@+id/business_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@mipmap/direct_default_logo" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/business_logo">
+
+                    <TextView
+                        android:id="@+id/business_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="广州深发客运有限公司"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <RatingBar
+                        android:id="@+id/rb_stars"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/business_name"
+                        android:layout_marginTop="10dp"
+                        android:isIndicator="true"
+                        android:maxHeight="12dp"
+                        android:minHeight="12dp"
+                        android:numStars="5"
+                        android:progressDrawable="@drawable/star_rating_yellow"
+                        android:rating="4.5"
+                        android:stepSize="0.3" />
+
+                    <TextView
+                        android:id="@+id/tv_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/business_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/rb_stars"
+                        android:background="@drawable/shape_red"
+                        android:text="@string/direct_business_score"
+                        android:textColor="@color/white"
+                        android:padding="2dp"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/city_line_item_padding_left"
+                android:paddingRight="@dimen/city_line_item_padding_left">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10月25号"
+                        android:textColor="@color/c_333333"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                    <TextView
+                        android:id="@+id/tv_biztype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/tv_start_date"
+                        android:gravity="center"
+                        android:text="(4:30 -21:00)"
+                        android:textColor="@color/c_666666"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_contain_noon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_stroke_red_city_line"
+                            android:padding="3dp"
+                            android:text="包午餐"
+                            android:textColor="@color/app_style"
+                            android:textSize="10sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_contain_ticket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/shape_stroke_red_city_line"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="包门票"
+                            android:textColor="@color/app_style"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="@dimen/city_line_item_padding_left">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/img_up"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/bus_item_start" />
+
+                        <ImageView
+                            android:id="@+id/img_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_up"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/city_line_list_vertical" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_vertical"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/bus_item_start" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_start_station"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/rl_img"
+                        android:paddingLeft="@dimen/city_line_item_padding_left"
+                        android:text="襄阳汽车总站"
+                        android:textColor="@color/c_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_is_start_station"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_start_station"
+                        android:paddingLeft="@dimen/city_line_item_padding_left"
+                        android:text="-途径"
+                        android:textColor="@color/c_999999"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_end_station"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_start_station"
+                        android:layout_toRightOf="@id/rl_img"
+                        android:paddingLeft="@dimen/city_line_item_padding_left"
+                        android:paddingTop="@dimen/city_line_item_padding_left"
+                        android:text="合肥客运站"
+                        android:textColor="@color/c_333333"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:id="@+id/tv_yuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="￥"
+                            android:textColor="@color/app_style"
+                            android:textSize="@dimen/city_line_item_origin_textsize" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_yuan"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_city_line_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="70.5"
+                                android:textColor="@color/app_style"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_is_have"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="有票"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View style="@style/split_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/app_space_side"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/app_space_side">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_guide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/line_state"
+                        android:drawablePadding="@dimen/detail_online_refer"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="退票、乘车指南"
+                        android:textColor="@color/c_666666"
+                        android:textSize="12.5sp" />
+
+                    <TextView
+                        android:id="@+id/tv_line_guide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/direct_desc_phone"
+                        android:drawablePadding="@dimen/detail_online_refer"
+                        android:gravity="right"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="在线咨询"
+                        android:textColor="@color/c_666666"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/split_line" />
+
+            <com.wxws.myticket.common.widgets.view.ListViewForScrollView
+                android:id="@+id/lv_desc"
+                style="@style/listViewNoDivider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="@dimen/app_space_side"
+                android:layout_marginRight="@dimen/app_space_side"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="途径路线"
+                    android:textColor="@color/c_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center_vertical"
+                    android:text="(点击可更换上下车站点)"
+                    android:textColor="@color/c_666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View style="@style/split_line" />
+
+            <com.wxws.myticket.common.widgets.view.ListViewForScrollView
+                android:id="@+id/lv_select_up"
+                style="@style/listViewNoDivider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.wxws.myticket.common.widgets.view.ListViewForScrollView
+                android:id="@+id/lv_select_down"
+                style="@style/listViewNoDivider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View style="@style/split_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_query_map"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/direct_query_map" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_space_side"
+                    android:text="点击查看路线地图"
+                    android:textColor="@color/c_666666"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginBottom="10dp"
+                style="@style/split_line" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_color_orange"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="立即预订"
+        android:textColor="@drawable/pay_enable_text_color"
+        android:textSize="18sp" />
+</LinearLayout>

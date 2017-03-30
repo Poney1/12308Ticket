@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_check"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/c_ed4d39"
+            android:text="@string/passenger_delete"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_contain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_passenger_normal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@mipmap/bus_ticket_shaixuan_draw_normal"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="李xx"
+                    android:textColor="@color/c_666666"
+                    android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_passenger_certifytype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="身份证： "
+                    android:textColor="@color/c_999999"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_identity_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4304821987129121901"
+                    android:textColor="@color/c_999999"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:paddingTop="14dp"
+                android:textSize="12sp"
+                android:textColor="@color/app_style"
+                android:id="@+id/tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/passenger_supplement"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="8dp"
+            android:src="@drawable/slt_passenger_edit" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

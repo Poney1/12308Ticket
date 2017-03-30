@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f0f0f0"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common" />
+
+    <LinearLayout
+        android:layout_margin="@dimen/app_space_side"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_f0f0f0"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/ll_view_end_padding_left">
+
+            <ImageButton
+                android:id="@+id/btn_change"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12dp"
+                android:background="@null"
+                android:src="@mipmap/view_change" />
+
+            <LinearLayout
+                android:id="@+id/ll_bus_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_toLeftOf="@id/btn_change">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ll_view_start_padding_left"
+                    android:background="@mipmap/view_bus_start" />
+
+                <TextView
+                    android:id="@+id/tv_select_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ll_view_start_padding_right"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/ll_view_please_select"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_999999"
+                    android:textSize="@dimen/ll_view_start_textSize" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/split_line"
+                android:layout_below="@id/ll_bus_start"
+                android:layout_toLeftOf="@id/btn_change" />
+
+            <LinearLayout
+                android:id="@+id/ll_bus_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_below="@id/ll_bus_start"
+                android:layout_toLeftOf="@id/btn_change">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ll_view_start_padding_left"
+                    android:background="@mipmap/view_bus_end"
+                    android:drawablePadding="@dimen/ll_view_start_padding_right" />
+
+                <TextView
+                    android:id="@+id/tv_select_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ll_view_start_padding_right"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/ll_view_please_select_end"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_999999"
+                    android:textSize="@dimen/ll_view_start_textSize" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/split_line"
+                android:layout_below="@id/ll_bus_end"
+                android:layout_toLeftOf="@id/btn_change" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_default_time"
+            style="@style/BusStartEnd"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/ll_view_end_padding_left_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_calendar" />
+
+            <TextView
+                android:id="@+id/tv_display_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ll_view_start_padding_right"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/ll_view_please_select"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/ll_view_day_textSize" />
+
+            <TextView
+                android:id="@+id/tv_default_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="@string/date_tomorrow"
+                android:textColor="@color/c_666666"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:src="@mipmap/ic_right" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_query"
+        style="@style/customButton"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:padding="10dp"
+        android:text="@string/gangao_button" />
+
+</LinearLayout>

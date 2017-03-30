@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/account_person_left"
+        android:layout_marginRight="@dimen/account_person_left"
+        android:layout_marginTop="@dimen/margin_40px"
+        android:background="@drawable/shape_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="10dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/account_password"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/account_person_size"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/line_line"/>
+
+        <com.wxws.myticket.my.widgets.view.ClearEditText
+            android:id="@+id/cet_updatephone_psw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:hint="@string/account_config_password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:padding="3dp"
+            android:textColorHint="@color/c_999999"
+            android:textCursorDrawable="@drawable/guangbiao"
+            android:textSize="@dimen/account_person_size"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/account_person_left"
+        android:layout_marginRight="@dimen/account_person_left"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/account_new_phone"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/account_person_size"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/line_line"/>
+
+        <com.wxws.myticket.my.widgets.view.ClearEditText
+            android:id="@+id/cet_updatephone_newphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:hint="@string/mobile_required"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLength="11"
+            android:padding="3dp"
+            android:textColorHint="@color/c_999999"
+            android:textCursorDrawable="@drawable/guangbiao"
+            android:textSize="@dimen/account_person_size"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/account_person_left"
+        android:layout_marginRight="@dimen/account_person_left"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/account_validate_code"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/account_person_size"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/line_line"/>
+
+        <EditText
+            android:id="@+id/et_updatephone_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:digits="0123456789"
+            android:hint="请输入验证码"
+            android:lines="1"
+            android:maxLength="6"
+            android:padding="3dp"
+            android:textColorHint="@color/c_999999"
+            android:textCursorDrawable="@drawable/guangbiao"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/bt_updatephone_getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_red_new2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/get_verify"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_updatephone_submit"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/btn_red_new"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+</LinearLayout>

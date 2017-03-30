@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/train_list_item_number_top"
+        android:paddingTop="@dimen/margin_20px">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_train_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="G1101"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/textsize_30px"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_wait_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/train_list_item_number_top"
+                android:drawableLeft="@mipmap/train_list_time"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:text="01：55"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/textsize_30px"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="08:05"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/textsize_30px"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/train_list_item_number_top"
+                android:text="08:05"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/textsize_30px"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+
+            <ImageView
+                android:id="@+id/img_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/train_list_place"/>
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/img_left"
+                android:paddingLeft="5dp"
+                android:text="深圳北"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/textsize_30px"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_start"
+                android:layout_marginTop="@dimen/train_list_item_number_top"
+                android:layout_toRightOf="@id/img_left"
+                android:paddingLeft="5dp"
+                android:text="广州南"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/textsize_30px"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_explain_desc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="6.5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_20px"
+                android:background="@drawable/slt_book_ticket_up"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/split_line"
+        android:layout_marginLeft="@dimen/train_list_item_number_top"
+        android:layout_marginRight="@dimen/train_list_item_number_top"/>
+
+    <com.wxws.myticket.common.widgets.view.GridViewForScrollView
+        android:id="@+id/grid_business"
+        style="@style/gridViewNoDivider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="4"
+        android:paddingTop="@dimen/margin_20px"/>
+
+    <LinearLayout
+        android:id="@+id/ll_list_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_dddddd"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/train_list_item_number_top"
+        android:paddingTop="@dimen/train_list_item_number_top"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/train_list_adapter_order"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/train_list_item_desc_size"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/train_list_adapter_name"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/train_list_item_desc_size"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/train_list_adapter_arrive"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/train_list_item_desc_size"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/train_list_adapter_start"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/train_list_item_desc_size"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/train_list_adapter_wait"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/train_list_item_desc_size"/>
+    </LinearLayout>
+
+    <com.wxws.myticket.common.widgets.view.ListViewForScrollView
+        android:id="@+id/train_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/c_dddddd"
+        android:dividerHeight="@dimen/margin_1px"
+        android:visibility="gone"/>
+
+</LinearLayout>

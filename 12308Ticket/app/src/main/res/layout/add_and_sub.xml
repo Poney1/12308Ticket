@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="center"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_add"
+        android:background="@drawable/slt_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/input_num"
+        android:enabled="false"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="@dimen/book_ticket_count_size"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@color/c_f0f0f0"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/btn_sub"
+        android:background="@drawable/slt_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

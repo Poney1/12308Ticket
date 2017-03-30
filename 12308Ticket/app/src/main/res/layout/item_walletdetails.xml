@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/margin_20px"
+              android:paddingRight="@dimen/margin_20px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_130px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_walletdetails_item_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="线下提现"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/textsize_32px"/>
+
+            <TextView
+                android:id="@+id/tv_walletdetails_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20px"
+                android:text="2015-12-30"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/margin_20px"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_walletdetails_item_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textStyle="bold"
+                android:textColor="@color/c_f03f3f"
+                android:textSize="@dimen/textsize_30px"/>
+
+            <TextView
+                android:id="@+id/tv_walletdetails_item_allmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20px"
+                android:text="2000"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/margin_20px"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/common_line"/>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/c_333333"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="半价票说明"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/c_333333"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="     身高1.20-1.50米的儿童乘车购买儿童票（半价）.革命伤残军人、
+        因公致残的人民警察分别凭《中华人民共和国残疾军人证》、《中华人民共和国伤残人
+        民警察证》购买优待票，即半价票，享受全价票待遇"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:gravity="center"
+            android:background="@drawable/shape_f0f0f0"
+            android:layout_width="145dp"
+            android:layout_height="45dp"
+            android:textColor="@color/c_333333"
+            android:text="取消"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_sure"
+            android:background="@drawable/shape_red"
+            android:layout_marginRight="20dp"
+            android:layout_width="145dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="确定"/>
+    </RelativeLayout>
+</LinearLayout>

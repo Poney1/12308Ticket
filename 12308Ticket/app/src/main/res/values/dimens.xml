@@ -1,0 +1,250 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--下拉刷新 上拉加载-->
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+
+    <!--公共尺寸-->
+    <!--dialog-->
+    <dimen name="normal_progress_size">32dp</dimen>
+    <dimen name="loading_dialog_text_size">14sp</dimen>
+    <!--常规控件间距-->
+    <dimen name="app_space">6dp</dimen>
+    <dimen name="app_space_side">10dp</dimen>
+
+    <!--titlebar-->
+    <dimen name="title_bar_left_padding">14dp</dimen>
+    <dimen name="title_bar_name_size">18sp</dimen>
+    <dimen name="title_bar_left_size">15sp</dimen>
+
+    <!--出发到达城市界面距离-->
+    <dimen name="ll_view_start_height">55dp</dimen>
+    <dimen name="ll_view_start_padding_top">12dp</dimen>
+    <dimen name="ll_view_start_padding_bottom">12dp</dimen>
+    <dimen name="ll_view_start_padding_left">4dp</dimen>
+    <dimen name="ll_view_start_padding_right">16dp</dimen>
+    <dimen name="ll_view_end_padding_left">14dp</dimen>
+    <dimen name="ll_view_end_padding_left_2">16dp</dimen>
+    <dimen name="ll_view_start_textSize">18sp</dimen>
+    <dimen name="ll_view_day_textSize">20sp</dimen>
+
+
+    <!--火车票首页-->
+    <dimen name="train_index_start_height">75dp</dimen>
+    <dimen name="train_index_start_padding_right">8dp</dimen>
+    <dimen name="train_index_start_padding_left">10dp</dimen>
+    <dimen name="train_index_start_text_size">16sp</dimen>
+    <dimen name="train_index_change_right">12dp</dimen>
+    <dimen name="train_index_change_left">24dp</dimen>
+    <dimen name="train_index_size">18sp</dimen>
+    <dimen name="train_index_padding_left">10dp</dimen>
+    <dimen name="train_index_binding_height">45dp</dimen>
+    <dimen name="train_index_binding_size">14sp</dimen>
+    <dimen name="train_index_history">5dp</dimen>
+    <dimen name="train_index_check">12sp</dimen>
+    <dimen name="train_index_history_size">14sp</dimen>
+    <dimen name="train_index_line_top">5dp</dimen>
+
+    <!--汽车票首页-->
+    <dimen name="ticket_line_size">14sp</dimen>
+    <dimen name="ticket_line_appoint_size">13sp</dimen>
+    <dimen name="ticket_car_appoint">14sp</dimen>
+    <dimen name="ticket_line_car">11sp</dimen>
+    <dimen name="ticket_bus_height">34dp</dimen>
+    <dimen name="ticket_left">10dp</dimen>
+    <dimen name="frag_index_history">5dp</dimen>
+    <dimen name="frag_index_check">12sp</dimen>
+    <dimen name="frag_index_history_size">14sp</dimen>
+    <dimen name="frag_index_line_top">5dp</dimen>
+    <dimen name="ticket_bus_size">14sp</dimen>
+    <dimen name="frag_index_prompt_top">10dp</dimen>
+    <dimen name="frag_index_bus_top">5dp</dimen>
+    <dimen name="frag_index_bus_width">75dp</dimen>
+    <dimen name="frag_index_bus_height">25dp</dimen>
+    <!--购票-->
+    <dimen name="ticket_av_top">10dp</dimen>
+    <dimen name="ticket_ret_size">15sp</dimen>
+    <!--城市 汽车票 火车票-->
+    <dimen name="city_hot_left">10dp</dimen>
+    <dimen name="city_location_left">8dp</dimen>
+    <dimen name="city_hot_text_size">14sp</dimen>
+
+    <!--汽车票填写订单/c城际快线-->
+    <dimen name="bus_book_info_left">8dp</dimen>
+    <dimen name="bus_book_left">12dp</dimen>
+    <dimen name="bus_book_top">8dp</dimen>
+    <dimen name="bus_book_backup_top">10dp</dimen>
+    <dimen name="bus_book_begin">20sp</dimen>
+    <dimen name="bus_book_end">13sp</dimen>
+    <dimen name="bus_book_is_need_child">15sp</dimen>
+    <dimen name="bus_book_type_top">8dp</dimen>
+    <dimen name="bus_book_count_size">4.8sp</dimen>
+    <dimen name="bus_book_pop_size">12sp</dimen>
+    <dimen name="bus_book_pop_left">12dp</dimen>
+    <dimen name="bus_book_pop_top">10dp</dimen>
+    <dimen name="bus_book_pop_top1">5dp</dimen>
+    <dimen name="bus_book_list_name_left">19dp</dimen>
+    <dimen name="direct_ticket_type_top">8dp</dimen>
+    <dimen name="direct_ticket_count_size">4.8sp</dimen>
+    <dimen name="direct_ticket_pop_size">12sp</dimen>
+    <dimen name="direct_ticket_pop_left">12dp</dimen>
+    <dimen name="direct_ticket_pop_top">10dp</dimen>
+    <dimen name="direct_ticket_fill_top">8dp</dimen>
+    <dimen name="book_ticket_count_size">4.8sp</dimen>
+
+    <!--汽车票列表/城际快线/港澳快线/机场快线/约租车-->
+    <dimen name="bus_list_introduce_top">10dp</dimen>
+    <dimen name="bus_list_tradition_top">10dp</dimen>
+    <dimen name="bus_list_tradition_name_size">14sp</dimen>
+    <dimen name="bus_list_tradition_ticket_count">12sp</dimen>
+    <dimen name="city_line_item_origin_textsize">12sp</dimen>
+    <dimen name="city_line_item_padding_left">10dp</dimen>
+    <dimen name="appoint_margin_top">8dp</dimen>
+    <dimen name="appoint_margin_top_2">5dp</dimen>
+    <dimen name="appoint_search_city_left">4dp</dimen>
+    <dimen name="appoint_overbooking_top">10dp</dimen>
+    <dimen name="appoint_overbooking_phone_left">12dp</dimen>
+    <dimen name="appoint_dialog_top">10dp</dimen>
+    <dimen name="new_appoint_overbooking_dialog_top">15dp</dimen>
+    <dimen name="new_appoint_margin_top">8dp</dimen>
+    <dimen name="new_appoint_margin_top_2">5dp</dimen>
+    <dimen name="search_city_left">4dp</dimen>
+    <dimen name="new_appoint_overbooking_top">10dp</dimen>
+    <dimen name="new_appoint_overbooking_phone_left">12dp</dimen>
+    <dimen name="cc_dialog_top">10dp</dimen>
+    <dimen name="nac_dialog_top">10dp</dimen>
+
+   <!-- 保险-->
+    <dimen name="insurance_text">15sp</dimen>
+    <dimen name="insurance_margin_top">15dp</dimen>
+    <dimen name="insurance_margin_left">20dp</dimen>
+
+    <!-- 直通车路线详情页-->
+    <dimen name="detail_time_text">16sp</dimen>
+    <dimen name="detail_online_refer">4dp</dimen>
+    <dimen name="detail_gridView_right">5dp</dimen>
+    <dimen name="detail_gridView_top">16dp</dimen>
+    <dimen name="detail_gridView_up_size">20sp</dimen>
+    <dimen name="detail_gridView_down_size">12sp</dimen>
+    <dimen name="detail_gridView_price_unit_size">6sp</dimen>
+    <dimen name="detail_gridView_price_size">10sp</dimen>
+
+
+    <!--自定义按钮边角弧度-->
+    <dimen name="btn_radius">5dp</dimen>
+    <dimen name="app_title_center_size">18sp</dimen>
+    <dimen name="app_title_left_size">15sp</dimen>
+
+
+    <!--出发城市 汽车票火车票-->
+    <dimen name="city_left">10dp</dimen>
+    <dimen name="city_select_abc_size">16sp</dimen>
+    <dimen name="city_select_abc_left">12dp</dimen>
+    <dimen name="city_select_city_left">16dp</dimen>
+    <dimen name="city_select_abc_top">8dp</dimen>
+
+    <!--火车票车次列表-->
+    <dimen name="train_list_pop_left">10dp</dimen>
+    <dimen name="train_list_pop_header_size">15sp</dimen>
+    <dimen name="train_list_pop_gridView_vertical">8dp</dimen>
+    <dimen name="train_list_pop_gridView_left">5dp</dimen>
+    <dimen name="train_list_pop_gridView_horizontal">8dp</dimen>
+    <dimen name="train_list_pop_gridView_header_left">4dp</dimen>
+    <dimen name="train_list_pop_gridView_header_size">13sp</dimen>
+    <dimen name="train_list_pop_up_top">10dp</dimen>
+    <dimen name="train_list_pop_up_bottom">5dp</dimen>
+    <dimen name="train_list_header_left">14dp</dimen>
+    <dimen name="train_list_item_number_top">10dp</dimen>
+    <dimen name="train_list_item_number_bottom">15dp</dimen>
+    <dimen name="train_list_item_desc_size">12sp</dimen>
+    <dimen name="train_list_item_seat_size">11sp</dimen>
+    <dimen name="train_list_item_seat_top">8dp</dimen>
+    <!-- 抢票-->
+    <dimen name="booking_ticket_width">340dp</dimen>
+    <dimen name="booking_ticket_height">230dp</dimen>
+    <dimen name="booking_ticket_height_show">163dp</dimen>
+    <dimen name="booking_ticket_failure_size">15sp</dimen>
+    <dimen name="booking_change_failure_size">18sp</dimen>
+    <dimen name="booking_change_failure_top">25dp</dimen>
+
+    <!--乘客-->
+    <dimen name="passenger_add_top">8dp</dimen>
+    <dimen name="passenger_add_padding_left">18dp</dimen>
+    <dimen name="passenger_add_height">45dp</dimen>
+    <dimen name="passenger_name_width">95dp</dimen>
+    <dimen name="passenger_content_width">90dp</dimen>
+    <!--标注-->
+    <dimen name="margin_1px">0.5dp</dimen>
+    <dimen name="margin_2px">1dp</dimen>
+    <dimen name="margin_4px">2dp</dimen>
+    <dimen name="margin_6px">3dp</dimen>
+    <dimen name="margin_8px">4dp</dimen>
+    <dimen name="margin_10px">5dp</dimen>
+    <dimen name="margin_12px">6dp</dimen>
+    <dimen name="margin_16px">8dp</dimen>
+    <dimen name="margin_19px">9.5dp</dimen>
+    <dimen name="margin_20px">10dp</dimen>
+    <dimen name="margin_24px">12dp</dimen>
+    <dimen name="margin_26px">13dp</dimen>
+    <dimen name="margin_28px">14dp</dimen>
+    <dimen name="margin_30px">15dp</dimen>
+    <dimen name="margin_32px">16dp</dimen>
+    <dimen name="margin_34px">17dp</dimen>
+    <dimen name="margin_38px">19dp</dimen>
+    <dimen name="margin_40px">20dp</dimen>
+    <dimen name="margin_44px">22dp</dimen>
+    <dimen name="margin_50px">25dp</dimen>
+    <dimen name="margin_60px">30dp</dimen>
+    <dimen name="margin_66px">33dp</dimen>
+    <dimen name="margin_70px">35dp</dimen>
+    <dimen name="margin_80px">40dp</dimen>
+    <dimen name="margin_88px">44dp</dimen>
+    <dimen name="margin_90px">45dp</dimen>
+    <dimen name="margin_100px">50dp</dimen>
+    <dimen name="margin_110px">55dp</dimen>
+    <dimen name="margin_120px">60dp</dimen>
+    <dimen name="margin_130px">65dp</dimen>
+    <dimen name="margin_140px">70dp</dimen>
+    <dimen name="margin_160px">80dp</dimen>
+    <dimen name="margin_200px">100dp</dimen>
+    <dimen name="margin_250px">125dp</dimen>
+
+    <dimen name="textsize_20px">10sp</dimen>
+    <dimen name="textsize_22px">11sp</dimen>
+    <dimen name="textsize_24px">12sp</dimen>
+    <dimen name="textsize_26px">13sp</dimen>
+    <dimen name="textsize_28px">14sp</dimen>
+    <dimen name="textsize_30px">15sp</dimen>
+    <dimen name="textsize_32px">16sp</dimen>
+    <dimen name="textsize_34px">17sp</dimen>
+    <dimen name="textsize_36px">18sp</dimen>
+    <dimen name="textsize_40px">20sp</dimen>
+    <dimen name="textsize_48px">24sp</dimen>
+    <dimen name="textsize_60px">30sp</dimen>
+
+    <!--登录页-->
+    <dimen name="bt_padding">5dp</dimen>
+    <dimen name="common_padding">15dp</dimen>
+    <dimen name="common_margin">10dp</dimen>
+
+    <!--个人资料-->
+    <dimen name="account_top">8dp</dimen>
+    <dimen name="third_left">20dp</dimen>
+    <dimen name="third_top">8dp</dimen>
+    <dimen name="binding_mobile_left">20dp</dimen>
+    <dimen name="account_person_size">16sp</dimen>
+    <dimen name="account_person_left">10dp</dimen>
+
+    <!--优惠券-->
+    <dimen name="coupon_rule_left">5dp</dimen>
+    <dimen name="coupon_text_size">18sp</dimen>
+    <dimen name="coupon_input_left">20dp</dimen>
+    <dimen name="coupon_sure_padding_top">10dp</dimen>
+    <dimen name="coupon_sure_margin_top">20dp</dimen>
+</resources>

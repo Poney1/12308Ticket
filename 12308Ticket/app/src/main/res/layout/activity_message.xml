@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+    <include layout="@layout/layout_loading"/>
+
+    <ListView
+        android:id="@+id/lv_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/c_f0f0f0"
+        android:dividerHeight="@dimen/margin_2px"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"/>
+
+    <include layout="@layout/common_line"/>
+
+
+</LinearLayout>

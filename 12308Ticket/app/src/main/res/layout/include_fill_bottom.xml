@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_bottom_direct"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="bottom"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rl_show_desc"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:paddingLeft="6dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/tv_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="6dp"
+            android:paddingLeft="6dp"
+            android:text="订单总价"
+            android:textColor="@color/c_999999"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_order"
+            android:text="@string/bookTicket_yuan"
+            android:textColor="@color/app_style"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_order"
+            android:layout_toRightOf="@id/tv_yuan"
+            android:text="111"
+            android:textColor="@color/app_style"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_ticket_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_order"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/tv_total_price"
+            android:text="@string/bookTicket_count"
+            android:textColor="@color/c_999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_show_desc"
+            android:layout_width="15dp"
+            android:layout_height="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/slt_book_ticket_up" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/app_style">
+
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:text="@string/bookTicket_submit_order"
+            android:textColor="@drawable/slt_pay_enable_text_color"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</LinearLayout>

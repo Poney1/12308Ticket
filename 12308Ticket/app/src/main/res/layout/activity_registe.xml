@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <include layout="@layout/common_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_120px"
+        android:layout_marginLeft="@dimen/margin_50px"
+        android:layout_marginRight="@dimen/margin_50px"
+        android:layout_marginTop="@dimen/common_padding"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:background="@mipmap/icon_user"/>
+
+        <com.wxws.myticket.my.widgets.view.ClearEditText
+            android:id="@+id/cet_registe_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:hint="请输入您的手机号"
+            android:lines="1"
+            android:padding="3dp"
+            android:textColorHint="@color/c_999999"
+            android:textCursorDrawable="@drawable/guangbiao"
+            android:textSize="@dimen/textsize_32px"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_2px"
+        android:layout_marginLeft="@dimen/margin_50px"
+        android:layout_marginRight="@dimen/margin_50px"
+        android:background="@color/c_dddddd"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_registe_psw"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_120px"
+        android:layout_marginLeft="@dimen/margin_50px"
+        android:layout_marginRight="@dimen/margin_50px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:background="@mipmap/icon_password"/>
+
+        <com.wxws.myticket.my.widgets.view.ClearEditText
+            android:id="@+id/cet_registe_psw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="20"
+            android:padding="3dp"
+            android:textColorHint="@color/c_999999"
+            android:textCursorDrawable="@drawable/guangbiao"
+            android:textSize="@dimen/textsize_32px"/>
+
+        <CheckBox
+            android:id="@+id/cb_registe_ispswvisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:button="@drawable/cb_show_psw"
+            android:checked="true"
+            android:textColor="@color/c_cccccc"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_2px"
+        android:layout_marginLeft="@dimen/margin_50px"
+        android:layout_marginRight="@dimen/margin_50px"
+        android:background="@color/c_dddddd"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_registe_verifycode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_120px"
+        android:layout_marginLeft="@dimen/margin_50px"
+        android:layout_marginRight="@dimen/margin_50px"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:background="@mipmap/phone_code"/>
+
+        <EditText
+            android:id="@+id/et_registe_verifycode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:digits="0123456789"
+            android:hint="请输入验证码"
+            android:maxLength="6"
+            android:padding="3dp"
+            android:lines="1"
+            android:textColorHint="@color/c_999999"
+            android:textCursorDrawable="@drawable/guangbiao"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/bt_registe_getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_red_new2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/get_verify"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <include layout="@layout/common_line"/>
+
+    <Button
+        android:id="@+id/bt_registe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100px"
+        android:layout_marginLeft="@dimen/margin_50px"
+        android:layout_marginRight="@dimen/margin_50px"
+        android:layout_marginTop="@dimen/margin_100px"
+        android:background="@drawable/btn_red_new"
+        android:text="@string/register"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_36px"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_50px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_registe_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/cb_selector"
+            android:checked="true"
+            android:padding="@dimen/margin_10px"
+            android:text="@string/agreeDeal"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/textsize_28px"/>
+
+        <TextView
+            android:id="@+id/tv_registe_12308protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10px"
+            android:text="@string/agree12308Deal"
+            android:textColor="@color/app_style"
+            android:textSize="@dimen/textsize_28px"/>
+    </LinearLayout>
+
+</LinearLayout>

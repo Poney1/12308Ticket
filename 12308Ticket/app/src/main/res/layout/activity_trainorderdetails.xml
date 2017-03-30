@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_orderdetails_container"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/sv_trianorderdetails_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbarSize="@dimen/margin_20px"
+            android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_120px">
+
+
+                <!--顶部提示-->
+                <LinearLayout
+                    android:id="@+id/ll_traindetails_toptips"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_70px"
+                    android:background="#ffd7c3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_24px"
+                    android:paddingRight="@dimen/margin_24px"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_traindetails_tipsinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/margin_4px"
+                        android:text="@string/train_order_details_top_to_pay"
+                        android:textColor="@color/app_style"
+                        android:textSize="@dimen/textsize_24px"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin_10px"
+                        android:drawableRight="@mipmap/icon_orderdeatils_redanchor"
+                        android:paddingRight="@dimen/margin_4px"
+                        android:text="@string/train_order_details_top_operate_details"
+                        android:textColor="@color/app_style"
+                        android:textSize="@dimen/textsize_24px"/>
+                </LinearLayout>
+
+                <!--如果有改签的票,则显示当前item-->
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20px"
+                    android:divider="@color/c_f0f0f0"
+                    android:dividerHeight="@dimen/margin_20px"
+                    android:scrollbars="none"
+                    android:visibility="gone"/>
+
+                <!--取票号等item-->
+                <include layout="@layout/common_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/margin_24px"
+                    android:paddingRight="@dimen/margin_24px"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_orderdetails_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="取票号:"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_24px"/>
+
+                        <TextView
+                            android:id="@+id/tv_traindetails_ticketnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10px"
+                            android:layout_weight="1"
+                            android:text="E500000001"
+                            android:textColor="@color/c_f03f3f"
+                            android:textSize="@dimen/textsize_24px"/>
+
+                        <TextView
+                            android:id="@+id/tv_traindetails_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_34px"
+                            android:layout_marginBottom="@dimen/margin_20px"
+                            android:layout_marginTop="@dimen/margin_20px"
+                            android:background="@drawable/bg_traindeails_status"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/margin_8px"
+                            android:paddingRight="@dimen/margin_8px"
+                            android:text="待支付"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_24px"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_2px"
+                        android:background="@color/c_f0f0f0"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/margin_20px"
+                        android:paddingTop="@dimen/margin_20px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_traindetails_fromdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="07-10"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/textsize_30px"/>
+
+                            <TextView
+                                android:id="@+id/tv_traindetails_fromtime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_20px"
+                                android:text="08:05"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_36px"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/tv_traindetails_fromstation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_20px"
+                                android:text="深圳北"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_30px"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+
+                                <TextView
+                                    android:id="@+id/tv_traindetails_trainline"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="@dimen/margin_6px"
+                                    android:text="G1101"
+                                    android:textColor="@color/c_666666"
+                                    android:textSize="@dimen/textsize_28px"/>
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="bottom"
+                                    android:src="@mipmap/icon_orderdetails_arrow"/>
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tv_traindetails_traintime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/margin_6px"
+                                android:drawableLeft="@mipmap/icon_orderdetails_time"
+                                android:drawablePadding="@dimen/margin_6px"
+                                android:text="11:55"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/textsize_24px"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_traindetails_todate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="07-10"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/textsize_30px"/>
+
+                            <TextView
+                                android:id="@+id/tv_traindetails_totime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_20px"
+                                android:text="08:05"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_36px"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/tv_traindetails_tostation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_20px"
+                                android:text="广州南"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_30px"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <!--乘客信息等-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_20px"
+                        android:background="@color/c_f0f0f0"/>
+
+                    <include layout="@layout/common_line"/>
+
+                    <com.wxws.myticket.order.widgets.CommonListView
+                        android:id="@+id/lv_traindetails_ticketsinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@color/c_f0f0f0"
+                        android:dividerHeight="@dimen/margin_2px"
+                        android:paddingLeft="@dimen/margin_24px"
+                        android:paddingRight="@dimen/margin_24px"
+                        android:scrollbars="none"
+                        android:visibility="visible"/>
+
+                    <include layout="@layout/common_line"/>
+                </LinearLayout>
+
+
+                <!--其他信息-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/common_line"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_24px"
+                        android:paddingRight="@dimen/margin_24px">
+
+                        <TextView
+                            android:id="@+id/tv_orderdetails_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_80px"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/train_order_details_mobile"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_traindetails_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13545654565"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_2px"
+                        android:layout_marginLeft="@dimen/margin_24px"
+                        android:layout_marginRight="@dimen/margin_24px"
+                        android:background="@color/c_f0f0f0"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_80px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_24px"
+                        android:paddingRight="@dimen/margin_24px">
+
+                        <TextView
+                            android:id="@+id/tv_orderdetails_text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/train_order_details_adult_insurance"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_traindetails_adultinsurance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(火车票意外保险¥30) x2"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_orderdetails_childinsurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_2px"
+                            android:layout_marginLeft="@dimen/margin_24px"
+                            android:layout_marginRight="@dimen/margin_24px"
+                            android:background="@color/c_f0f0f0"/>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_80px"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/margin_24px"
+                            android:paddingRight="@dimen/margin_24px">
+
+                            <TextView
+                                android:id="@+id/tv_orderdetails_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/train_order_details_child_insurance"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/textsize_28px"/>
+
+                            <TextView
+                                android:id="@+id/tv_traindetails_childinsurance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(火车票意外保险¥30) x2"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_28px"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/common_line"/>
+                </LinearLayout>
+
+                <!-- 退票/改签须知-->
+                <LinearLayout
+                    android:id="@+id/ll_traindetails_refundlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/common_line"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_80px"
+                        android:layout_marginLeft="@dimen/margin_24px"
+                        android:layout_marginRight="@dimen/margin_24px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_orderdetails_text5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/train_order_details_refund_o_endorse"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/textsize_30px"/>
+
+                        <ImageView
+                            android:id="@+id/iv_orderdetails_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/icon_arrow_right"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/common_line"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_orderdetails_deleteorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="@dimen/margin_20px"
+                        android:background="@color/c_cccccc"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_90px"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="删除订单"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_30px"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c_cccccc"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_orderdetails_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_100px"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_traindetails_btleft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/black_btn_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_orderdetails_trainbotton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_12px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥"
+                            android:textColor="@color/app_style"
+                            android:textSize="@dimen/textsize_24px"/>
+
+                        <TextView
+                            android:id="@+id/tv_traindetails_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/app_style"
+                            android:textSize="@dimen/textsize_40px"/>
+
+                        <TextView
+                            android:id="@+id/tv_traindetails_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_20px"
+                            android:text="@string/train_order_details_total_count"
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_24px"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/margin_12px"
+                        android:text="@string/train_order_details_total_amount"
+                        android:textColor="@color/c_999999"
+                        android:textSize="@dimen/textsize_24px"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_icon_anchor"
+                    android:layout_width="@dimen/margin_30px"
+                    android:layout_height="@dimen/margin_16px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_20px"
+                    android:background="@mipmap/icon_bookticket_up"
+                    android:button="@null"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_traindeatils_btright"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_orange"
+                android:text="@string/train_order_details_right_bt_to_pay"
+                android:textColor="@drawable/pay_enable_text_color"
+                android:textSize="@dimen/textsize_36px"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

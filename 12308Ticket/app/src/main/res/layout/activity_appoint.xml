@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 百度地图 -->
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/bmapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/appoint_margin_top"
+            android:layout_marginRight="@dimen/appoint_margin_top"
+            android:layout_marginTop="@dimen/appoint_margin_top_2"
+            android:background="@drawable/shape_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_becity"
+                style="@style/linearLayout_nac">
+
+                <TextView
+                    style="@style/customTextView_nac"
+                    android:layout_marginLeft="14dp"
+                    android:background="@mipmap/view_bus_start" />
+
+                <TextView
+                    android:id="@+id/etBecity"
+                    style="@style/customEditView"
+                    android:hint="@string/nac_select_start"
+                    android:textColor="@color/c_333333" />
+
+            </LinearLayout>
+
+            <View style="@style/split_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_encity"
+                style="@style/linearLayout_nac">
+
+                <TextView
+                    style="@style/customTextView"
+                    android:layout_marginLeft="14dp"
+                    android:background="@mipmap/view_bus_end" />
+
+                <TextView
+                    android:id="@+id/etEncity"
+                    style="@style/customEditView"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/nac_select_end"
+                    android:textColor="@color/c_333333" />
+
+            </LinearLayout>
+
+            <View style="@style/split_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_departure_time"
+                style="@style/linearLayout_nac">
+
+                <TextView
+                    style="@style/customTextView_nac"
+                    android:layout_marginLeft="14dp"
+                    android:background="@mipmap/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/etDeparturetime"
+                    style="@style/customEditView"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/nac_select_time"
+                    android:textColor="@color/c_333333" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tv_overbooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_red_new"
+            android:padding="8dp"
+            android:text="@string/nac_overbooking"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!--自己的位置-->
+        <Button
+            android:id="@+id/btn_my_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_overbooking"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/slt_my_location_selector" />
+    </RelativeLayout>
+
+</LinearLayout>

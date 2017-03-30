@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_price_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/bus_book_pop_left"
+            android:layout_marginTop="@dimen/bus_book_pop_top"
+            android:text="金额详情"
+            android:textColor="@color/c_333333"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_full"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bus_book_pop_top"
+            android:paddingBottom="@dimen/bus_book_pop_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_full"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/bus_book_pop_size" />
+
+            <TextView
+                android:id="@+id/tv_full_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_price_desc"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_count"
+                android:textColor="@color/app_style"
+                android:textSize="@dimen/bus_book_pop_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_half"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bus_book_pop_top"
+            android:paddingBottom="@dimen/bus_book_pop_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_half"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/bus_book_pop_size" />
+
+            <TextView
+                android:id="@+id/tv_half_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_count"
+                android:textColor="@color/app_style"
+                android:textSize="@dimen/bus_book_pop_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bus_book_pop_top"
+            android:paddingBottom="@dimen/bus_book_pop_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_insurance"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/bus_book_pop_size" />
+
+            <TextView
+                android:id="@+id/tv_insurance_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_count"
+                android:textColor="@color/app_style"
+                android:textSize="@dimen/bus_book_pop_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bus_book_pop_top"
+            android:paddingBottom="@dimen/bus_book_pop_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_service"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/bus_book_pop_size" />
+
+            <TextView
+                android:id="@+id/tv_fee_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_count"
+                android:textColor="@color/app_style"
+                android:textSize="@dimen/bus_book_pop_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bus_book_pop_top"
+            android:paddingBottom="@dimen/bus_book_pop_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_quan"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/bus_book_pop_size" />
+
+            <TextView
+                android:id="@+id/tv_quan_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bus_book_pop_left"
+                android:text="@string/bookTicket_pop_count"
+                android:textColor="@color/app_style"
+                android:textSize="@dimen/bus_book_pop_size" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

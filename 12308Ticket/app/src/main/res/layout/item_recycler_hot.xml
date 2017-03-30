@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_hot"
+        android:layout_marginTop="@dimen/city_hot_left"
+        android:layout_marginLeft="@dimen/city_hot_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/city_vertical"
+        android:drawablePadding="4dp"
+        android:textColor="@color/app_text_color_gary"
+        android:textSize="@dimen/city_hot_text_size"
+        android:text="@string/city_hot"/>
+
+    <com.wxws.myticket.common.widgets.view.GridViewForScrollView
+        android:layout_marginLeft="@dimen/city_hot_left"
+        style="@style/gridViewNoDivider"
+        android:id="@+id/rl_hot"
+        android:numColumns="4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

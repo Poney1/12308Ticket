@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:gravity="center"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/title_bar_common"/>
+
+        <ImageView
+            android:id="@+id/iv_busorderdetails_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:src="@mipmap/ic_orderdetails_call"/>
+    </RelativeLayout>
+
+    <include layout="@layout/layout_loading"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/margin_100px"
+            android:scrollbarSize="10dp"
+            android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_20px">
+                <!--顶部红色提示-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffd7c3"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_20px"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="当前距离开车时间还有"
+                        android:textColor="@color/app_style"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="分,请妥善规划时间"
+                        android:textColor="@color/app_style"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <!--top车次总信息-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_content_order"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_bustype"
+                            style="@style/customTextView"
+                            android:drawableLeft="@mipmap/ic_bustype"
+                            android:gravity="left|center_vertical"
+                            android:text="空调商务大巴"
+                            android:textColor="@color/c_666666"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_status"
+                            style="@style/customTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="right|center_vertical"
+                            android:text="初始化"
+                            android:textColor="@color/c_f03f3f"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/common_shortline"/>
+
+                    <TextView
+                        android:id="@+id/tv_busorderdetails_startdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="10dp"
+                        android:text="2015-04-18 星期二"
+                        android:textColor="@color/c_666666"
+                        android:textSize="14sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_startcity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center_vertical"
+                                android:text="深圳"
+                                android:textColor="@color/c_333333"
+                                android:textSize="20sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_startstation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="left|center_vertical"
+                                android:lines="1"
+                                android:text="福田汽车站"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_starttime"
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:text="07:00"
+                                android:textColor="@color/c_333333"
+                                android:textSize="20sp"/>
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:layout_marginTop="5dp"
+                                android:gravity="left|center_vertical"
+                                android:text="出发"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_endcity"
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:text="广州"
+                                android:textColor="@color/c_333333"
+                                android:textSize="20sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_endstation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="right|center_vertical"
+                                android:lines="1"
+                                android:text="越秀北站越秀北"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/common_shortline"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:text="订单总额:"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_totalprice"
+                                style="@style/customTextView"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="￥00"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:paddingLeft="12dp"
+                                android:text="优惠券:"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_couponprice"
+                                style="@style/customTextView"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="￥00"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:paddingLeft="6dp"
+                                android:text="保险:"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_insuranceprice"
+                                style="@style/customTextView"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="￥00"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <!--保险份数后续再看是否需要-->
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_insurancenum"
+                                style="@style/customTextView"
+                                android:gravity="center"
+                                android:text="(00份)"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:text="服务费:"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_feeprice"
+                                style="@style/customTextView"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="00"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:paddingLeft="12dp"
+                                android:text="全价票:"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_fullprice"
+                                style="@style/customTextView"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="00"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:paddingLeft="6dp"
+                                android:text="半价票:"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_halfprice"
+                                style="@style/customTextView"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="00"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="center"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:text="全价票:"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_fullnum"
+                                style="@style/customTextView"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="00"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:paddingLeft="12dp"
+                                android:text="半价票:"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_halfnum"
+                                style="@style/customTextView"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="00"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/customTextView"
+                                android:gravity="left|center_vertical"
+                                android:paddingLeft="6dp"
+                                android:text="携童票:"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_busorderdetails_withchildnum"
+                                style="@style/customTextView"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="00"
+                                android:textColor="@color/c_666666"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/common_line"/>
+
+                </LinearLayout>
+
+                <!--汽车票扫码-->
+                <LinearLayout
+                    android:id="@+id/ll_busorderdetails_ecode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_20px"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="扫码上车"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_48px"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/icon_buscode"/>
+
+                </LinearLayout>
+
+
+                <!--直通车扫码-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20px"
+                    android:layout_marginRight="@dimen/margin_20px"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_busorderdetails_map"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin_120px"
+                        android:layout_marginTop="@dimen/margin_20px"
+                        android:layout_weight="1"
+                        android:background="@mipmap/bg_code"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看位置"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/textsize_30px"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_40px"
+                            android:background="@mipmap/icon_map"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_busorderdetails_eticket"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin_120px"
+                        android:layout_marginLeft="@dimen/margin_10px"
+                        android:layout_marginTop="@dimen/margin_20px"
+                        android:layout_weight="1"
+                        android:background="@mipmap/bg_code"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="出示电子票"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/textsize_30px"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_40px"
+                            android:background="@mipmap/icon_barcode"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--短信信息-->
+
+                <LinearLayout
+                    android:id="@+id/ll_busorderdetails_tickettips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="旅客可凭如下信息取票"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_30px"/>
+
+                    <TextView
+                        android:id="@+id/tv_busorderdetails_tickettipscontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:text="哈哈哈哈哈"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_24px"/>
+
+                </LinearLayout>
+
+                <!--乘车退票指南-->
+                <TextView
+                    android:id="@+id/tv_busorderdetails_refundtips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:background="@drawable/bg_content_order"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/line_state"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/ic_into"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp"
+                    android:text="乘车退票指南"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp"/>
+
+                <!--乘车信息-->
+                <LinearLayout
+                    android:id="@+id/ll_busorderdetails_ccinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/common_line"/>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_80px"
+                        android:layout_marginLeft="@dimen/margin_20px"
+                        android:gravity="center_vertical"
+                        android:text="乘车信息"
+                        android:textColor="@color/c_666666"
+                        android:textSize="15sp"/>
+
+                    <include layout="@layout/common_shortline"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_20px"
+                        android:paddingTop="@dimen/margin_20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="车队信息："
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_ccdriver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肖司机"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_20px"
+                        android:paddingTop="@dimen/margin_20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="联系电话："
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_ccphone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13823187120"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_20px"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="车牌号码："
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_cccarnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="粤B-97797788"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_20px"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="乘车时间："
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_cctime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2015-5-5"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/margin_20px"
+                        android:paddingLeft="@dimen/margin_20px"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="乘车地点："
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_ccsite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="粤B-97797788"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <!--乘客信息-->
+                <LinearLayout
+                    android:id="@+id/ll_busorderdetails_passengerinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/common_line"/>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_80px"
+                        android:layout_marginLeft="@dimen/margin_20px"
+                        android:gravity="center_vertical"
+                        android:text="乘客信息"
+                        android:textColor="@color/c_666666"
+                        android:textSize="15sp"/>
+
+                    <include layout="@layout/common_shortline"/>
+
+                    <com.wxws.myticket.order.widgets.CommonListView
+                        android:id="@+id/clv_busorderdetails_passengerlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20px"
+                        android:layout_marginRight="@dimen/margin_20px"
+                        android:divider="@color/c_dddddd"
+                        android:dividerHeight="@dimen/margin_1px"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <!--购票人信息-->
+                <LinearLayout
+                    android:id="@+id/ll_busorderdetails_gprinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/common_line"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_80px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_80px"
+                            android:layout_marginLeft="@dimen/margin_20px"
+                            android:gravity="center_vertical"
+                            android:text="购票人信息"
+                            android:textColor="@color/c_666666"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_gprname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_38px"
+                            android:layout_marginLeft="@dimen/margin_20px"
+                            android:background="@drawable/bg_getticket"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/margin_19px"
+                            android:paddingRight="@dimen/margin_19px"
+                            android:text="哈哈哈"
+                            android:textColor="@color/c_f03f3f"
+                            android:textSize="@dimen/textsize_24px"/>
+                    </LinearLayout>
+
+
+                    <include layout="@layout/common_shortline"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/margin_20px"
+                        android:paddingLeft="@dimen/margin_20px"
+                        android:paddingTop="@dimen/margin_20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="手机号码："
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_gprphone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肖司机"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <!--取票人信息-->
+                <LinearLayout
+                    android:id="@+id/ll_busorderdetails_qprinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/common_line"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_80px"
+                        android:layout_marginLeft="@dimen/margin_20px"
+                        android:gravity="center_vertical"
+                        android:text="取票人信息"
+                        android:textColor="@color/c_666666"
+                        android:textSize="15sp"/>
+
+                    <include layout="@layout/common_shortline"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_20px"
+                        android:paddingTop="@dimen/margin_20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="姓    名："
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_qprname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肖司机"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_20px"
+                        android:paddingTop="@dimen/margin_20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="身份证："
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_qprcardnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肖司机"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/margin_20px"
+                        android:paddingLeft="@dimen/margin_20px"
+                        android:paddingTop="@dimen/margin_20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="手机号："
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_28px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_qprphone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肖司机"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/textsize_28px"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <!--退款信息-->
+                <LinearLayout
+                    android:id="@+id/ll_busorderdetails_refundlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/common_line"/>
+
+                    <com.wxws.myticket.order.widgets.CommonListView
+                        android:id="@+id/clv_busorderdetails_refundlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20px"
+                        android:layout_marginRight="@dimen/margin_20px"
+                        android:divider="@color/c_dddddd"
+                        android:dividerHeight="@dimen/margin_1px"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/common_line"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_busorderdetails_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_100px"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_busorderdetails_btleft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/black_btn_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_12px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥"
+                            android:textColor="@color/app_style"
+                            android:textSize="@dimen/textsize_24px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdeatils_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/app_style"
+                            android:textSize="@dimen/textsize_40px"/>
+
+                        <TextView
+                            android:id="@+id/tv_busorderdetails_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_20px"
+                            android:text="@string/train_order_details_total_count"
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/textsize_24px"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/margin_12px"
+                        android:text="@string/train_order_details_total_amount"
+                        android:textColor="@color/c_999999"
+                        android:textSize="@dimen/textsize_24px"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_busorderdetails_anchor"
+                    android:layout_width="@dimen/margin_30px"
+                    android:layout_height="@dimen/margin_16px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_20px"
+                    android:background="@mipmap/icon_bookticket_up"
+                    android:button="@null"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_busorderdetails_btright"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_orange"
+                android:text="@string/train_order_details_right_bt_to_pay"
+                android:textColor="@drawable/pay_enable_text_color"
+                android:textSize="@dimen/textsize_36px"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

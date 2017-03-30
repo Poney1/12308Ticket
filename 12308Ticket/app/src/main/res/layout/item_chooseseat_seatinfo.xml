@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_90px"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/margin_24px"
+    android:paddingRight="@dimen/margin_24px">
+
+    <TextView
+        android:id="@+id/tv_itemchoose_type"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="二等座"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/textsize_30px" />
+
+    <TextView
+        android:id="@+id/tv_itemchoose_count"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="250张"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/textsize_30px" />
+
+    <TextView
+        android:id="@+id/tv_itemchoose_price"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="¥199.0"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/textsize_30px" />
+
+    <Button
+        android:id="@+id/bt_itemchoose_buy"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@drawable/selector_bt_endorse"
+        android:gravity="center"
+        android:text="@string/choose_seat_buy"
+        android:textColor="@drawable/selector_text_endorse"
+        android:textSize="15sp" />
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20px"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_20px"
+        android:paddingRight="@dimen/margin_20px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_circle_red"
+            android:gravity="center"
+            android:text="Q"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_30px"/>
+
+        <TextView
+            android:id="@+id/tv_question_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20px"
+            android:layout_weight="1"
+            android:text="汽车票咋变飞机票"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/textsize_30px"/>
+
+        <TextView
+            android:id="@+id/tv_question_asktime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-03-21"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/textsize_24px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20px"
+        android:layout_marginTop="@dimen/margin_40px"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_20px"
+        android:paddingRight="@dimen/margin_20px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_circle_green"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_30px"/>
+
+        <TextView
+            android:id="@+id/tv_question_issolve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20px"
+            android:layout_weight="1"
+            android:text="解决"
+            android:textColor="@color/c_f03f3f"
+            android:textSize="@dimen/textsize_30px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回答:"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/textsize_24px"/>
+
+        <TextView
+            android:id="@+id/tv_question_anwsertime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20px"
+            android:text="1个回答"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/textsize_24px"/>
+    </LinearLayout>
+
+    <include layout="@layout/common_line"/>
+
+</LinearLayout>

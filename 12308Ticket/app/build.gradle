@@ -1,0 +1,154 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+8"))
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+
+    //签名
+    signingConfigs {
+        release {
+            keyAlias '12308'
+            keyPassword 'wxws12308'
+            storeFile file('wxws.keystore')
+            storePassword 'wxws12308'
+        }
+    }
+
+
+    defaultConfig {
+        applicationId "com.wxws.myticket"
+        minSdkVersion 12
+        targetSdkVersion 23
+        versionCode 68
+        versionName "7.0.4"
+        multiDexEnabled true //dex突破65535限制
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "12308Ticket"]
+        resValue "string", "bmapkey", "gpsg5iELnerW8aRi6h5mUUV9"
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //是否进行混淆
+            minifyEnabled true
+            //混肴文件位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = outputFile.name.replace(".apk", "_${defaultConfig.versionName}_${releaseTime()}.apk")
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+            buildConfigField "String", "APIHOST_RELEASE_1", "\"http://webapi.12308.com\"" //生产环境
+            buildConfigField "String", "APIHOST_RELEASE_2", "\"http://newapi.12308.com\"" //生产环境2
+            buildConfigField "String", "APIHOST_PRERELEASE", "\"http://192.168.1.38:8087\"" //金刚环境
+            buildConfigField "String", "APIHOST_WANTEST", "\"http://webapi.12308.com\"" //外网测试环境
+            buildConfigField "String", "APIHOST_TEST", "\"http://192.168.1.122:8087\"" //测试环境
+            buildConfigField "String", "APIHOST_TEST_1", "\"http://192.168.1.122:8100\"" //火车票测试环境
+            buildConfigField "String", "APIHOST_DEVELOP", "\"http://192.168.1.27:8080/web\"" //开发环境
+            buildConfigField "String", "APIHOST_DEVELOP_1", "\"http://192.168.1.27:8080/service-webapp\""
+            //汽车票开发环境
+        }
+        debug {
+            jniDebuggable true
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix "-debug"
+            zipAlignEnabled false
+            signingConfig signingConfigs.release
+            shrinkResources false
+            buildConfigField "String", "APIHOST_RELEASE_1", "\"http://webapi.12308.com\"" //生产环境
+            buildConfigField "String", "APIHOST_RELEASE_2", "\"http://newapi.12308.com\"" //生产环境2
+            buildConfigField "String", "APIHOST_PRERELEASE", "\"http://192.168.1.38:8087\"" //金刚环境
+            buildConfigField "String", "APIHOST_WANTEST", "\"http://218.244.130.45:8280\"" //外网测试环境
+            buildConfigField "String", "APIHOST_TEST", "\"http://192.168.1.122:8087\"" //测试环境
+            buildConfigField "String", "APIHOST_TEST_1", "\"http://192.168.1.122:8100\"" //火车票测试环境
+            buildConfigField "String", "APIHOST_DEVELOP", "\"http://192.168.1.27:8080/web\"" //开发环境
+            buildConfigField "String", "APIHOST_DEVELOP_1", "\"http://192.168.1.27:8080/service-webapp\""
+            //汽车票开发环境
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs'] //这一行是没有的，如果我们有.so文件就需要加上这一行代码
+        }
+    }
+    //移除lint检查的error
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    // 友盟多渠道打包
+    productFlavors {
+        _12308Ticket {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "12308Ticket"]
+        }
+        _360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "_360"]
+        }
+    }
+}
+
+//引用了aar文件
+    repositories {
+        flatDir {
+            dirs 'aar'
+        }
+    }
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.alibaba:fastjson:1.2.17'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.liulishuo.filedownloader:library:0.3.0'
+    compile(name: 'pickerview-release', ext: 'aar')
+    compile(name: 'swipelistview-1.0-20150209.085056-12', ext: 'aar')
+    compile files('libs/baidumapapi_base_v3_7_3.jar')
+    compile files('libs/baidumapapi_cloud_v3_7_3.jar')
+    compile files('libs/baidumapapi_map_v3_7_3.jar')
+    compile files('libs/baidumapapi_search_v3_7_3.jar')
+    compile files('libs/greendao-2.1.0.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/MobCommons-2016.0816.1507.jar')
+    compile files('libs/MobTools-2016.0816.1507.jar')
+    compile files('libs/paybyqqlib.jar')
+    compile files('libs/ShareSDK-Core-2.7.6.jar')
+    compile files('libs/ShareSDK-QQ-2.7.6.jar')
+    compile files('libs/ShareSDK-QZone-2.7.6.jar')
+    compile files('libs/ShareSDK-ShortMessage-2.7.6.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.7.6.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.6.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.6.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.7.6.jar')
+    compile files('libs/universal-image-loader-1.9.4.jar')
+    compile files('libs/UPPayAssistEx.jar')
+    compile files('libs/UPPayPluginExPro.jar')
+    compile files('libs/alipaySdk-20160825.jar')
+    compile files('libs/locSDK_6.13.jar')
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+}

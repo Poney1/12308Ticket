@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <EditText
+        android:id="@+id/et_question_question"
+        android:hint="请在这里概述您的问题"
+        android:textColor="@color/c_666666"
+        android:textColorHint="@color/c_999999"
+        android:textSize="@dimen/textsize_28px"
+        android:layout_marginBottom="@dimen/margin_20px"
+        android:layout_marginTop="@dimen/margin_20px"
+        android:background="@color/white"
+        android:padding="@dimen/margin_20px"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80px"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <EditText
+            android:id="@+id/et_toask_details"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:gravity="left|top"
+            android:hint="您的意见将有助于我们改进产品和保证服务质量!"
+            android:padding="@dimen/margin_20px"
+            android:textColor="@color/c_666666"
+            android:textColorHint="@color/c_999999"
+            android:textSize="@dimen/textsize_28px"/>
+
+        <TextView
+            android:id="@+id/tv_toask_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/margin_20px"
+            android:text="0/200"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/textsize_28px"/>
+    </RelativeLayout>
+
+    <include layout="@layout/common_line"/>
+
+    <Button
+        android:id="@+id/bt_toask_submit"
+        style="@style/customButton"
+        android:layout_marginLeft="@dimen/margin_20px"
+        android:layout_marginRight="@dimen/margin_20px"
+        android:layout_marginTop="@dimen/margin_80px"
+        android:text="提交"/>
+</LinearLayout>

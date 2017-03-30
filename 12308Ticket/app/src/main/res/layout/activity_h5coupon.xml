@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_20px"
+        android:paddingRight="@dimen/margin_20px"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/textsize_30px"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_h5coupon_linetype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机场快线"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/textsize_30px"/>
+
+                <TextView
+                    android:id="@+id/tv_h5coupon_quantype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20px"
+                    android:text="专享券"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/textsize_24px"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_h5coupon_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_34px"
+                android:layout_marginTop="@dimen/margin_20px"
+                android:text="2016-06-22至2016-07-02"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/textsize_24px"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_h5coupon_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="600"
+                android:textColor="@color/c_f03f3f"
+                android:textSize="@dimen/textsize_60px"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/c_f03f3f"
+                android:textSize="@dimen/textsize_30px"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/coupon_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/wv_h5coupon_webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/bt_h5coupon_buyticket"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_88px"
+        android:background="@color/c_f03f3f"
+        android:text="立即购票"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_36px"/>
+
+</LinearLayout>

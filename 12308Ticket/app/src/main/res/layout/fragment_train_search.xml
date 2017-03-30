@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/c_ebebeb">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/train_index_start_padding_right"
+                    android:paddingRight="@dimen/train_index_start_padding_right">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_train_start"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/train_index_start_height"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:hint="@string/train_index_start"
+                            android:textColor="@color/c_333333"
+                            android:textColorHint="@color/c_999999"
+                            android:textSize="18sp"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/slt_train_change_city"
+                            android:paddingLeft="@dimen/train_index_change_left"
+                            android:paddingRight="@dimen/train_index_change_right"/>
+
+                        <TextView
+                            android:id="@+id/tv_train_end"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/train_index_start_height"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:hint="@string/train_index_end"
+                            android:textColor="@color/c_333333"
+                            android:textColorHint="@color/c_999999"
+                            android:textSize="18sp"/>
+
+                    </LinearLayout>
+
+                    <ImageView style="@style/split_line"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_default_time"
+                        android:paddingLeft="@dimen/ll_view_end_padding_left_2"
+                        style="@style/BusStartEnd">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/ic_calendar" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_display_time"
+                            android:textSize="@dimen/ll_view_day_textSize"
+                            android:layout_marginLeft="@dimen/ll_view_start_padding_right"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="@string/ll_view_please_select"
+                            android:textColor="@color/c_333333" />
+
+                        <TextView
+                            android:id="@+id/tv_default_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            android:text="@string/date_tomorrow"
+                            android:textColor="@color/c_666666"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:src="@mipmap/ic_right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView style="@style/split_line"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_only_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/train_index_start_padding_left"
+                        android:layout_marginRight="@dimen/train_index_start_padding_right"
+                        android:gravity="center_vertical"
+                        android:text="@string/train_index_only_speed"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/train_index_start_text_size"/>
+
+                    <com.wxws.myticket.common.widgets.view.CheckSwitchButton
+                        android:id="@+id/ck_select_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_only_speed"/>
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/btn_query"
+                    style="@style/customButton"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="24dp"
+                    android:padding="10dp"
+                    android:text="查询车票"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:background="@mipmap/ic_dotted_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/train_index_history"
+                    android:layout_marginRight="@dimen/train_index_history"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@mipmap/index_icon_search"/>
+
+                    <TextView
+                        android:id="@+id/tv_query_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="查询历史"
+                        android:textSize="@dimen/train_index_check"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:background="@mipmap/ic_dotted_line"/>
+            </LinearLayout>
+
+            <com.wxws.myticket.common.widgets.view.ListViewForScrollView
+                android:id="@+id/ls_history"
+                style="@style/listViewNoDivider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_binding_12306"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/train_index_binding_height"
+        android:layout_gravity="bottom"
+        android:background="@color/c_FFE8C7"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/train_binding_12306"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_binding_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:text="@string/train_binding_12308"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/train_index_binding_size"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_binding_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="(账户或密码错误)"
+                    android:textColor="@color/c_f03f3f"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_binding_12306"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/train_binding_12308"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/train_index_binding_size"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

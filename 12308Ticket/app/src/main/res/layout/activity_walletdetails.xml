@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/c_f0f0f0"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_walletdetails_container"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/c_f0f0f0">
+
+        <ImageView
+            android:id="@+id/iv_walletdetails_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/title_bar_left_padding"
+            android:paddingRight="@dimen/title_bar_left_padding"
+            android:src="@drawable/slt_title_bar_return"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="收支明细"
+            android:textColor="@color/app_title_color"
+            android:textSize="@dimen/textsize_36px"/>
+
+        <LinearLayout
+            android:id="@+id/ll_walletdetails_shaixuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10px"
+                android:text="筛选"
+                android:textColor="@color/c_f03f3f"/>
+
+            <ImageView
+                android:id="@+id/iv_walletdetails_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_orderlist_shaixuan_down"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/common_line"/>
+
+    <ListView
+        android:id="@+id/lv_walletdetails_list"
+        android:dividerHeight="0dp"
+        android:divider="@color/white"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

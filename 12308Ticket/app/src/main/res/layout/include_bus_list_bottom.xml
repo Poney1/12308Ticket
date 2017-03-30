@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@color/c_f0f0f0"
+    android:orientation="horizontal"
+    android:paddingTop="8dp">
+
+    <com.wxws.myticket.common.widgets.view.MenuButton
+        android:id="@+id/menu_shaixuan"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        ptr:menuImage="@drawable/slt_bus_station"
+        ptr:menuText="@string/bus_list_station" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/c_dddddd" />
+
+    <com.wxws.myticket.common.widgets.view.MenuButton
+        android:id="@+id/menu_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        ptr:menuImage="@drawable/slt_bus_time"
+        ptr:menuText="@string/bus_list_time_section" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/c_dddddd" />
+
+    <com.wxws.myticket.common.widgets.view.MenuButton
+        android:id="@+id/menu_price"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        ptr:menuImage="@drawable/slt_bus_price"
+        ptr:menuText="@string/bus_list_price" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/c_dddddd" />
+
+    <com.wxws.myticket.common.widgets.view.MenuButton
+        android:id="@+id/menu_all"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        ptr:menuImage="@drawable/slt_bus_all_class"
+        ptr:menuText="@string/bus_list_all_sell" />
+</LinearLayout>
+

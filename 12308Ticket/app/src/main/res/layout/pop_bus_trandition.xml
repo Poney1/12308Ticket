@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#e5e5e5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_riding_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:text="取消"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_riding_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:paddingRight="15dp"
+            android:text="确定"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_station"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_select"
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/app_style" />
+
+                    <TextView
+                        android:id="@+id/tv_up_station"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/slt_pop_tradition_up_station"
+                        android:gravity="center"
+                        android:text="@string/bus_list_pop_up_station"
+                        android:textColor="@color/c_333333"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_select_2"
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/app_style" />
+
+                    <TextView
+                        android:id="@+id/tv_down_station"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/slt_pop_tradition_up_station"
+                        android:gravity="center"
+                        android:text="@string/bus_list_pop_down_station"
+                        android:textColor="@color/c_333333"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/c_dddddd" />
+
+
+        <ListView
+            android:id="@+id/list"
+            style="@style/listViewNoDivider"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@color/white"
+            android:listSelector="@color/transparent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="8dp"
+            android:scrollbars="none" />
+    </LinearLayout>
+</LinearLayout>

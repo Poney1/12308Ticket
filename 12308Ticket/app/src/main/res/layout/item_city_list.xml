@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvGroupTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_ecf1f2"
+        android:paddingBottom="6dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="6dp"
+        android:textStyle="bold"
+        android:text="常用"
+        android:textColor="@color/c_323232"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvCityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="12dp"
+        android:text="北京(beijing)"
+        android:textColor="@drawable/slt_333_08b4f4"
+        android:textSize="16sp" />
+
+</LinearLayout>

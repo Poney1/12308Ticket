@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f0f0f0"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common" />
+
+    <include layout="@layout/layout_loading" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/fillinorder_topbg"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_fillinorder_fromdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="07-10"
+                            android:textColor="#FFB1B7"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_fillinorder_fromtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="08:05"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_fillinorder_fromstation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="深圳北"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:src="@mipmap/icon_fillinorder_arrow" />
+
+                            <TextView
+                                android:id="@+id/tv_fillinorder_traincode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="3dp"
+                                android:text="G1101"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </FrameLayout>
+
+
+                        <TextView
+                            android:id="@+id/tv_fillinorder_runtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:drawableLeft="@mipmap/icon_fillinorder_time"
+                            android:drawablePadding="3dp"
+                            android:text="11:55"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_fillinorder_todate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="07-10"
+                            android:textColor="#FFB1B7"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_fillinorder_totime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="08:05"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_fillinorder_tostation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="广州南"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/split_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_fillinorder_seattype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="二等座"
+                        android:textColor="@color/c_333333"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fillinorder_isunfold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@mipmap/icon_fillinorder_unfold" />
+                    <!--收起 icon_fillorder_packup-->
+
+                    <TextView
+                        android:id="@+id/tv_fillinorder_seatprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="¥ 259.0"
+                        android:textColor="@color/c_333333"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f0f0f0" />
+
+                    <ListView
+                        android:id="@+id/lv_fillorder_seat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@color/white"
+                        android:divider="@color/c_f0f0f0"
+                        android:dividerHeight="1dp"
+                        android:scrollbars="none"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View style="@style/split_line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <View style="@style/split_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="接受无座"
+                        android:textColor="@color/c_666666"
+                        android:textSize="15sp" />
+
+                    <com.wxws.myticket.common.widgets.view.CheckSwitchButton
+                        android:id="@+id/cb_fillinorder_acceptnoseat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="true" />
+                </LinearLayout>
+
+                <View style="@style/split_line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <View style="@style/split_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="添加乘客"
+                        android:textColor="@color/c_666666"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="每个订单最多添加5人"
+                        android:textColor="@color/c_999999"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_fillinorder_addpassenger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/c_f0f0f0" />
+
+                        <ImageView
+                            android:id="@+id/iv_fillinorder_addpassenger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:background="@mipmap/icon_fillinorder_add" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f0f0f0" />
+
+                    <ListView
+                        android:id="@+id/lv_fillorder_passenger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@color/white"
+                        android:divider="@color/c_f0f0f0"
+                        android:dividerHeight="1dp"
+                        android:listSelector="@android:color/transparent"
+                        android:scrollbars="none"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View style="@style/split_line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <View style="@style/split_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="联系手机"
+                        android:textColor="@color/c_666666"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/et_fillinorder_mobiephone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:hint="请添加联系人手机号码"
+                        android:paddingRight="12dp"
+                        android:textColor="@color/c_666666"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/c_f0f0f0" />
+
+                    <ImageView
+                        android:id="@+id/iv_fillinorder_addphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:background="@mipmap/icon_fillinorder_contact" />
+                </LinearLayout>
+
+                <View style="@style/split_line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="使用优惠券"
+                        android:textColor="@color/c_666666"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="12dp"
+                        android:drawableRight="@mipmap/icon_arrow_right"
+                        android:gravity="right"
+                        android:text="暂不使用"
+                        android:textColor="@color/c_999999"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <View style="@style/split_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fillinorder_adultinsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="成人保险"
+                            android:textColor="@color/c_666666"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_fillinorder_adultinsurance_infodetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="为了您和家人出行安全，建议您购买保险"
+                            android:textColor="@color/c_999999"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_fillinorder_adultinsurance_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="12dp"
+                        android:drawableRight="@mipmap/icon_arrow_right"
+                        android:gravity="right"
+                        android:text="暂不购买"
+                        android:textColor="@color/c_666666"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_fillinorder_childinsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View style="@style/split_line" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <View style="@style/split_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="儿童保险"
+                            android:textColor="@color/c_666666"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_fillinorder_childinsurance_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="12dp"
+                            android:drawableRight="@mipmap/icon_arrow_right"
+                            android:gravity="right"
+                            android:text="暂不购买"
+                            android:textColor="@color/c_666666"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/split_line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <View style="@style/split_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fillinorder_refundx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/icon_fillinorder_refund"
+                        android:drawablePadding="12dp"
+                        android:text="退票改签须知"
+                        android:textColor="@color/c_666666"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/icon_arrow_right" />
+
+                </LinearLayout>
+
+                <View style="@style/split_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_fillinorder_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:button="@drawable/btn_checkbox_small"
+                        android:checked="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="已阅读并同意"
+                        android:textColor="@color/c_666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fillinorder_needknow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="《购票须知》"
+                        android:textColor="@color/c_f03f3f"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="与"
+                        android:textColor="@color/c_666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fillinorder_protocal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:singleLine="true"
+                        android:text="《12308火车票预订协议》"
+                        android:textColor="@color/c_f03f3f"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_fillinorder_commitorder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_orange"
+                android:text="@string/fill_in_order_submit_order"
+                android:textColor="@drawable/pay_enable_text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

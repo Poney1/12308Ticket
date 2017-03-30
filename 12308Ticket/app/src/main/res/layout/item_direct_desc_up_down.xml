@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="4dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/img_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/direct_up"
+            android:layout_marginBottom="4dp"/>
+
+
+        <ImageView
+            android:layout_marginBottom="4dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/img_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/img_type"
+            android:background="@mipmap/icon_line_dotted"/>
+        <ImageView
+            android:layout_marginTop="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/img_type"
+            android:id="@+id/img_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_line_dotted"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp">
+
+        <TextView
+            android:id="@+id/tv_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="广州流花车站"
+            android:textColor="@color/c_333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <View style="@style/split_line" />
+    </RelativeLayout>
+
+</LinearLayout>

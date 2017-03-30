@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar_common" />
+
+    <include layout="@layout/layout_loading" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_input"
+            android:drawableLeft="@mipmap/ic_seach"
+            android:drawablePadding="3dp"
+            android:hint="@string/search_city_hint"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/imgBtnDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:padding="12dp"
+            android:src="@mipmap/ic_del"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ListView
+                android:id="@+id/list"
+                style="@style/customListView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:divider="@color/c_dddddd"
+                android:dividerHeight="1px"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none" />
+
+            <com.myticket.wedgets.MyLetterView
+                android:id="@+id/letterview"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#BB000000"
+            android:gravity="center"
+            android:maxWidth="200dip"
+            android:minWidth="70dip"
+            android:padding="10dip"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/listSearch"
+        style="@style/customListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/c_dddddd"
+        android:dividerHeight="1px"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvNokeyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dip"
+        android:textColor="@color/c_333333"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+</LinearLayout>

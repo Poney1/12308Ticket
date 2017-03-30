@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="330dp"
+              android:layout_height="202dp"
+              android:background="@drawable/shape_white"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_endorsedialog_oneticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_blue"
+        android:padding="8dp"
+        android:text="改签本张车票"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/bt_endorsedialog_allticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_red_new"
+        android:padding="8dp"
+        android:text="改签全部车票"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="提示：改签全部车票，可能会出现部分车票改签失败"
+        android:textColor="@color/c_999999"
+        android:textSize="@dimen/textsize_24px"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/c_f0f0f0"/>
+
+    <Button
+        android:id="@+id/bt_endorsedialog_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:text="取消"
+        android:textColor="@color/c_f03f3f"
+        android:textSize="18sp"/>
+
+
+</LinearLayout>

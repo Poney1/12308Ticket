@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_delete"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slt_delete_passenger"/>
+
+     <TextView
+         android:layout_toRightOf="@id/item_delete"
+         android:id="@+id/item_tv_name"
+         android:layout_marginTop="18dp"
+         android:layout_marginLeft="@dimen/bus_book_list_name_left"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/c_333333"
+         android:textSize="15sp"
+         android:text="张三岁"/>
+
+    <TextView
+        android:id="@+id/item_tv_cer"
+        android:layout_toRightOf="@id/item_delete"
+        android:layout_below="@id/item_tv_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/bus_book_list_name_left"
+        android:layout_marginBottom="10dp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/c_999999"
+        android:textSize="15sp"
+         android:text="张三岁张三岁"/>
+
+    <TextView
+        android:id="@+id/item_tv_adult"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="54dp"
+        android:layout_height="19dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:drawableRight="@mipmap/book_fill_adult_down"
+        android:drawablePadding="2dp"
+        android:padding="2dp"
+        android:background="@drawable/shape_red"
+        android:text="成人票"/>
+
+    <View
+        android:layout_alignParentBottom="true"
+        style="@style/split_line"/>
+
+</RelativeLayout>

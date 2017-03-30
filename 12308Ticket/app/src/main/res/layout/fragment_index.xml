@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/c_f0f0f0">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/index_12308" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#dddddd" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_time_remaining"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/c_ffd7c3"
+        android:lines="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/bus_ticket_remain_time"
+        android:textColor="@color/app_style"
+        android:textSize="14sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_f0f0f0"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/frag_index_prompt_top"
+        android:paddingTop="@dimen/frag_index_prompt_top">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ticket"
+                android:layout_width="@dimen/frag_index_bus_width"
+                android:layout_height="@dimen/frag_index_bus_height"
+                android:background="@drawable/slt_index_header_wordage"
+                android:gravity="center"
+                android:text="@string/bus_ticket"
+                android:textColor="@drawable/slt_3f_to_66"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ticket_direct"
+                android:layout_width="@dimen/frag_index_bus_width"
+                android:layout_height="@dimen/frag_index_bus_height"
+                android:background="@drawable/slt_index_header_wordage"
+                android:gravity="center"
+                android:text="@string/bus_ticket_direct"
+                android:textColor="@drawable/slt_3f_to_66"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_train"
+                android:layout_width="@dimen/frag_index_bus_width"
+                android:layout_height="@dimen/frag_index_bus_height"
+                android:background="@drawable/slt_index_header_wordage"
+                android:gravity="center"
+                android:text="@string/train"
+                android:textColor="@drawable/slt_3f_to_66"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_index"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

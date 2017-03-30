@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/title_bar_common" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/c_f0f0f0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_arrive_time"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:background="#ffd7c3"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:text="@string/bookTicket_show_time"
+                android:textColor="@color/app_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="25dp"
+                android:paddingTop="@dimen/app_space_side">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-09-25 09:00"
+                    android:textColor="@color/c_333333"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="(周日)"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/app_space_side"
+                android:paddingRight="@dimen/app_space_side">
+
+                <ImageView
+                    android:id="@+id/img_bus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/direct_fill_bus" />
+
+                <TextView
+                    android:id="@+id/tv_start_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="深圳"
+                    android:textColor="@color/c_333333"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_start_station"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_start_city"
+                    android:layout_marginTop="8dp"
+                    android:text="广州市长途客运站"
+                    android:textColor="@color/c_666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_end_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="广州"
+                    android:textColor="@color/c_333333"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_end_station"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tv_end_city"
+                    android:layout_marginTop="8dp"
+                    android:text="广州市长途客运站"
+                    android:textColor="@color/c_666666"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/app_space_side"
+                android:paddingRight="@dimen/app_space_side">
+
+                <View
+                    android:id="@+id/view_line"
+                    style="@style/split_line"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_bus_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_line"
+                    android:layout_marginTop="@dimen/app_space_side"
+                    android:text="大型座一"
+                    android:textColor="@color/c_333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_bus_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_bus_type"
+                    android:layout_marginTop="@dimen/app_space_side"
+                    android:text="*不支持进站取票"
+                    android:textColor="@color/app_style"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/view_line"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:text="票价:  "
+                        android:textColor="@color/c_999999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:text="￥"
+                        android:textColor="@color/app_style"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fill_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="70"
+                        android:textColor="@color/app_style"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tv_bus_type"
+                    android:layout_marginTop="@dimen/app_space_side"
+                    android:text="@string/direct_fill_service"
+                    android:textColor="@color/c_999999"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <View style="@style/split_line" />
+
+            <View
+                style="@style/split_line"
+                android:layout_marginTop="@dimen/app_space_side" />
+
+            <LinearLayout
+                android:id="@+id/ll_not_need_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/layout_select_ticket_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/direct_ticket_type_top"
+                    android:paddingLeft="@dimen/app_space_side"
+                    android:paddingRight="@dimen/app_space_side"
+                    android:paddingTop="@dimen/direct_ticket_type_top">
+
+                    <TextView
+                        android:id="@+id/tv_show_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/slt_direct_fill_type"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:drawablePadding="6dp"
+                        android:drawableRight="@mipmap/line_state"
+                        android:gravity="center_vertical"
+                        android:text="@string/direct_type_buy"
+                        android:textColor="@color/c_666666"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <View style="@style/split_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_ticket_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/app_space_side"
+                        android:paddingRight="@dimen/app_space_side"
+                        android:paddingTop="@dimen/direct_ticket_fill_top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="全价票(全价票有座位)"
+                            android:textColor="@color/c_666666"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/asv_full_price"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_f0f0f0_no_radius"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/split_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_half"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/app_space_side"
+                        android:paddingRight="@dimen/app_space_side"
+                        android:paddingTop="@dimen/direct_ticket_fill_top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="半价票(半价票有座位)"
+                            android:textColor="@color/c_666666"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/asv_half_price"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_f0f0f0_no_radius"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0" />
+                    </RelativeLayout>
+
+                    <View style="@style/split_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_xietong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/app_space_side"
+                        android:paddingRight="@dimen/app_space_side"
+                        android:paddingTop="@dimen/direct_ticket_fill_top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="携童票(免费无座位)"
+                            android:textColor="@color/c_666666"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/asv_xietong"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_f0f0f0_no_radius"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/split_line" />
+
+                <View
+                    style="@style/split_line"
+                    android:layout_marginTop="@dimen/app_space_side" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_need_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_passenger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/bus_book_top"
+                    android:paddingLeft="@dimen/app_space_side"
+                    android:paddingRight="@dimen/app_space_side"
+                    android:paddingTop="@dimen/bus_book_top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/bookTicket_add_passenger"
+                        android:textColor="@color/c_666666"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
+                        android:background="@mipmap/line_state" />
+
+                    <TextView
+                        style="@style/customTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/direct_max_buy"
+                        android:textColor="@color/c_999999"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:id="@+id/img_btn_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:src="@mipmap/ic_right" />
+
+                </LinearLayout>
+
+                <View style="@style/split_line" />
+
+                <com.wxws.myticket.common.widgets.view.ListViewForScrollView
+                    android:id="@+id/list_fill"
+                    style="@style/listViewDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:scrollbars="none" />
+
+                <View
+                    style="@style/split_line"
+                    android:layout_marginTop="@dimen/bus_book_backup_top" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/direct_ticket_pop_top"
+                    android:paddingLeft="@dimen/app_space_side"
+                    android:paddingRight="@dimen/app_space_side"
+                    android:paddingTop="@dimen/direct_ticket_pop_top">
+
+                    <TextView
+                        android:id="@+id/tv_ticket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/direct_fill_get_ticket"
+                        android:textColor="@color/c_666666"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ticket_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tv_ticket"
+                        android:background="@drawable/shape_stroke_red_city_line"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="张三三"
+                        android:textColor="@color/app_style" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:src="@mipmap/ic_right" />
+                </RelativeLayout>
+
+                <View style="@style/split_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/app_space_side"
+                android:paddingLeft="@dimen/app_space_side"
+                android:paddingRight="@dimen/app_space_side"
+                android:paddingTop="@dimen/app_space_side">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/direct_fill_phone"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                style="@style/split_line"
+                android:layout_marginTop="@dimen/app_space_side" />
+
+            <RelativeLayout
+                android:id="@+id/rl_backup"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/bus_book_left"
+                android:paddingRight="@dimen/bus_book_left">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/tv_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="备选车次"
+                        android:textColor="@color/c_333333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_backup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_top"
+                        android:layout_marginTop="10dp"
+                        android:text="如选车次无票，同意更换"
+                        android:textColor="@color/c_666666"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <com.wxws.myticket.common.widgets.view.CheckSwitchButton
+                    android:id="@+id/csb_backup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <View style="@style/split_line" />
+
+            <View
+                style="@style/split_line"
+                android:layout_marginTop="@dimen/bus_book_backup_top" />
+
+            <LinearLayout
+                android:id="@+id/ll_use_coupon"
+                android:padding="12dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textColor="@color/c_333333"
+                    android:textSize="15sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bookTicket_ticket_coupon"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="价格"
+                    android:textColor="@color/c_333333"
+                    android:id="@+id/tv_coupon"
+                    android:drawablePadding="@dimen/app_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/ic_right"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View style="@style/split_line" />
+
+            <View
+                style="@style/split_line"
+                android:layout_marginTop="@dimen/bus_book_backup_top" />
+
+            <RelativeLayout
+                android:id="@+id/rl_insurance"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/bus_book_left"
+                android:paddingRight="@dimen/bus_book_left">
+
+                <TextView
+                    android:id="@+id/tv_insurance_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="3元/份乘客意外险"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_insurance_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@mipmap/ic_right"
+                    android:text="最高保3万"
+                    android:textColor="@color/c_999999"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/include_fill_bottom" />
+</LinearLayout>

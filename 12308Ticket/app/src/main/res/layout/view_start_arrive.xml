@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_vq"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:paddingLeft="@dimen/ll_view_end_padding_left">
+
+        <ImageButton
+            android:id="@+id/btn_change"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="12dp"
+            android:background="@null"
+            android:src="@mipmap/view_change" />
+
+        <LinearLayout
+            android:layout_toLeftOf="@id/btn_change"
+            android:id="@+id/ll_bus_start"
+            style="@style/BusStartEnd">
+
+            <TextView
+                android:layout_marginLeft="@dimen/ll_view_start_padding_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/view_bus_start" />
+
+            <TextView
+                android:textColorHint="@color/c_999999"
+                android:textColor="@color/c_333333"
+                android:id="@+id/tv_select_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ll_view_start_padding_right"
+                android:textSize="@dimen/ll_view_start_textSize"
+                android:hint="@string/ll_view_please_select" />
+
+        </LinearLayout>
+        <View
+            android:layout_toLeftOf="@id/btn_change"
+            android:layout_below="@id/ll_bus_start"
+            style="@style/split_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_bus_end"
+            style="@style/BusStartEnd"
+            android:layout_toLeftOf="@id/btn_change"
+            android:layout_below="@id/ll_bus_start">
+
+            <TextView
+                android:layout_marginLeft="@dimen/ll_view_start_padding_left"
+                android:drawablePadding="@dimen/ll_view_start_padding_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/view_bus_end" />
+
+            <TextView
+                android:textColorHint="@color/c_999999"
+                android:textColor="@color/c_333333"
+                android:id="@+id/tv_select_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ll_view_start_padding_right"
+                android:textSize="@dimen/ll_view_start_textSize"
+                android:hint="@string/ll_view_please_select_end" />
+
+        </LinearLayout>
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/btn_change"
+            style="@style/split_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/ll_default_time"
+        android:paddingLeft="@dimen/ll_view_end_padding_left_2"
+        style="@style/BusStartEnd">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_calendar" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_display_time"
+            android:textSize="@dimen/ll_view_day_textSize"
+            android:layout_marginLeft="@dimen/ll_view_start_padding_right"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/ll_view_please_select"
+            android:textColor="@color/c_333333" />
+
+        <TextView
+            android:id="@+id/tv_default_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="@string/date_tomorrow"
+            android:textColor="@color/c_666666"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@mipmap/ic_right" />
+    </LinearLayout>
+
+    <View style="@style/split_line" />
+
+    <Button
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:id="@+id/btn_query"
+        style="@style/customButton"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="24dp"
+        android:padding="10dp"
+        android:text="查询车票" />
+</LinearLayout>

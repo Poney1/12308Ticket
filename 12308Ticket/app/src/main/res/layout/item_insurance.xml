@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/insurance_margin_left"
+        android:paddingTop="@dimen/insurance_margin_top"
+        android:paddingBottom="@dimen/insurance_margin_top">
+
+        <TextView
+            android:id="@+id/tv_insurance_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3Y/份"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/insurance_text" />
+
+        <TextView
+            android:id="@+id/tv_insurance_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_insurance_price"
+            android:layout_marginTop="@dimen/insurance_margin_top"
+            android:text="3Y/份"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/insurance_text" />
+
+        <ImageView
+            android:id="@+id/img_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/insurance_margin_left"
+            android:background="@mipmap/bus_ticket_shaixuan_draw" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/split_line" />
+</LinearLayout>

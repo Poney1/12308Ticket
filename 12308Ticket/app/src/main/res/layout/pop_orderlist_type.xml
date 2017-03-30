@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_choosetype_qbdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/cb_orderlist_choosetype"
+            android:button="@null"
+            android:gravity="center"
+            android:text="全部订单"
+            android:textColor="@color/c_333333"
+            android:textSize="14sp"/>
+
+        <CheckBox
+            android:id="@+id/cb_choosetype_qcpdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/cb_orderlist_choosetype"
+            android:button="@null"
+            android:gravity="center"
+            android:text="汽车票订单"
+            android:textColor="@color/c_333333"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_choosetype_hcpdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/cb_orderlist_choosetype"
+            android:button="@null"
+            android:gravity="center"
+            android:text="火车票订单"
+            android:textColor="@color/c_333333"
+            android:textSize="14sp"/>
+
+        <CheckBox
+            android:id="@+id/cb_choosetype_ztcdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/cb_orderlist_choosetype"
+            android:button="@null"
+            android:gravity="center"
+            android:text="直通车订单"
+            android:textColor="@color/c_333333"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_choosetype_wybcdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/cb_orderlist_choosetype"
+            android:button="@null"
+            android:gravity="center"
+            android:text="我要包车订单"
+            android:textColor="@color/c_333333"
+            android:textSize="14sp"/>
+
+        <CheckBox
+            android:id="@+id/cb_choosetype_yzcdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/cb_orderlist_choosetype"
+            android:button="@null"
+            android:gravity="center"
+            android:text="约租车订单"
+            android:textColor="@color/c_333333"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_choosetype_close"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"></RelativeLayout>
+
+</LinearLayout>

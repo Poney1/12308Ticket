@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_ebebeb"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.wxws.myticket.common.widgets.view.ViewQueryLine
+            android:id="@+id/vq_bus_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.wxws.myticket.common.widgets.view.GridViewForScrollView
+            android:id="@+id/gv_introduce"
+            style="@style/gridViewNoDivider"
+            android:numColumns="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"/>
+        <LinearLayout
+            android:id="@+id/ll_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ticket_left"
+            android:layout_marginRight="@dimen/ticket_left"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@mipmap/ic_dotted_line" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/frag_index_history"
+                android:layout_marginRight="@dimen/frag_index_history"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/ticket_search" />
+
+                <TextView
+                    android:id="@+id/tv_query_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="查询历史"
+                    android:textSize="@dimen/frag_index_check" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@mipmap/ic_dotted_line" />
+        </LinearLayout>
+
+
+        <com.wxws.myticket.common.widgets.view.ListViewForScrollView
+            android:id="@+id/ls_bus_history"
+            style="@style/listViewNoDivider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+</ScrollView>

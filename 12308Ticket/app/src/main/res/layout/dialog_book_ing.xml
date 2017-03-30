@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/booking_ticket_width"
+    android:layout_height="@dimen/booking_ticket_height"
+    android:background="@drawable/shape_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_rob_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/booking_ticket_height_show"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:text="正在拼命抢票中..."
+            android:textColor="@color/c_666666"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/icon_book_circle_bg" />
+
+            <ImageView
+                android:id="@+id/img_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/icon_book_circle" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:text="已抢票1次"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_24px" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_no_rob"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/booking_ticket_height_show"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:background="@mipmap/icon_booking_rob_failure" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="太火爆了，实在抢不到啊！"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/booking_ticket_failure_size" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="20dp"
+        android:background="@color/c_dddddd" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@null"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/fill_in_order_background"
+        android:textColor="@color/c_f03f3f"
+        android:textSize="16sp" />
+
+</LinearLayout>

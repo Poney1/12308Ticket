@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_orderlist_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/c_f0f0f0">
+
+        <TextView
+            android:id="@+id/rv_orderlist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="全部订单"
+            android:textColor="@color/app_title_color"
+            android:textSize="@dimen/textsize_36px"/>
+
+        <LinearLayout
+            android:id="@+id/ll_orderlist_shaixuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10px"
+                android:text="其他"
+                android:textColor="@color/c_f03f3f"/>
+
+            <ImageView
+                android:id="@+id/iv_orderlist_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_orderlist_shaixuan_down"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/common_line"/>
+
+
+    <RadioGroup
+        android:id="@+id/rg_orderlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_orderlist_recent"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_orderlist_rorh"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="最近订单"
+            android:textColor="@drawable/text_trainlist_color"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/c_f0f0f0"/>
+
+        <RadioButton
+            android:id="@+id/rb_orderlist_history"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="历史订单"
+            android:textColor="@drawable/text_trainlist_color"
+            android:textSize="15sp"/>
+    </RadioGroup>
+
+    <include layout="@layout/common_line"/>
+
+    <FrameLayout
+        android:id="@+id/fl_orderlist_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_f0f0f0"
+        android:gravity="center"/>
+
+
+</LinearLayout>

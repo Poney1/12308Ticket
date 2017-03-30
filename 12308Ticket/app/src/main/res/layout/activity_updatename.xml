@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <include layout="@layout/common_line"/>
+
+    <com.wxws.myticket.my.widgets.view.ClearEditText
+        android:id="@+id/tv_updatename_textinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40px"
+        android:background="@drawable/shape_white"
+        android:hint="@string/mobile_required"
+        android:lines="1"
+        android:layout_marginRight="@dimen/margin_20px"
+        android:layout_marginLeft="@dimen/margin_20px"
+        android:padding="@dimen/margin_20px"
+        android:textColorHint="@color/c_999999"
+        android:textCursorDrawable="@drawable/guangbiao"
+        android:textSize="@dimen/account_person_size"/>
+
+    <TextView
+        android:id="@+id/tv_updatename_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="16dp"
+        android:text="不要超过10个汉字"
+        android:textColor="@color/c_999999"/>
+
+    <Button
+        android:id="@+id/bt_updatename_submit"
+        style="@style/customButton"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:padding="10dp"
+        android:text="保 存"/>
+
+</LinearLayout>

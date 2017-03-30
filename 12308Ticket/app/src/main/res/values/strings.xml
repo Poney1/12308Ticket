@@ -1,0 +1,476 @@
+<resources>
+
+    <string name="app_name">全国汽车票</string>
+
+    <!--公共-->
+    <string name="main_activity_main_menu">购票</string>
+    <string name="main_activity_active_menu">活动</string>
+    <string name="main_activity_order_menu">订单</string>
+    <string name="main_activity_person_menu">个人</string>
+    <string name="index_out_date">亲，不能超过预售期哦</string>
+    <string name="loaddata_fail">糟糕,获取数据失败</string>
+    <string name="net_service_error">系统繁忙,请稍候重试</string>
+    <string name="query_ticket_fail">亲，该城市暂未开通网上售票哦</string>
+    <string name="query_question_fail">空空如也,赶紧去提问吧</string>
+    <string name="query_ticket_fail2">该城市暂停网络售票,请前往汽车站购票</string>
+    <string name="query_ticket_fail3">该城市暂未开通网络售票,请前往汽车站购票</string>
+    <string name="query_order_fail">空空如也,赶紧去买票吧</string>
+    <string name="query_order_fail2">空空如也,赶紧去包车吧</string>
+    <string name="query_no_history">暂无历史订单</string>
+    <string name="query_passenger_fail">空空如也,立即去添加吧</string>
+    <string name="query_station_fail">抱歉,没有找到您要的数据</string>
+    <string name="query_train_fail">没有符合条件的车次信息</string>
+    <string name="query_coupon">您还没有优惠券</string>
+    <string name="query_coupon_use">您没有可用优惠券</string>
+    <string name="query_station_fail4">抱歉,没有可售班次。</string>
+    <string name="click_reload">点击重试</string>
+    <string name="click_buy_ticket">立即购票</string>
+    <string name="click_buy_newtrain">立即购票</string>
+    <string name="click_buy_newticket">立即购票</string>
+    <string name="click_return">点击返回</string>
+    <string name="tips_login_order">亲,登陆后才能查询到订单哦</string>
+    <string name="go_login">立即登录</string>
+    <string name="find_new_version">发现新版本</string>
+    <string name="update_now">立即更新</string>
+    <string name="update_later">稍候更新</string>
+    <string name="app_download_use_flow">"确定要使用移动流量下载吗？"</string>
+    <string name="app_download_error">"下载出错！"</string>
+    <string name="common_cancel_download">取消下载</string>
+    <string name="new_version_info">最新版本:v%1$s</string>
+
+
+    <!-- 通用错误处理 -->
+    <string name="net_timeout_error">连接服务器超时</string>
+    <string name="net_off_error">当前网络已断开,请检查网络</string>
+    <string name="net_abnormal_error">网络异常</string>
+    <string name="net_server_error">服务器异常</string>
+    <string name="net_click_reload">点击重试</string>
+    <string name="net_open_settings">启动网络</string>
+    <string name="net_message_null">暂时没有任何消息</string>
+    <string name="net_return_pre_page">返回上一页</string>
+    <string name="net_refresh_again">刷新重试</string>
+
+    <string name="base_activity_loading">正在努力加载ing</string>
+    <string name="back">再按一次退出程序</string>
+
+     <!--首页-->
+    <string name="train">火车票</string>
+    <string name="bus_ticket">汽车票</string>
+    <string name="bus_ticket_direct">直通车</string>
+    <string name="bus_ticket_remain_time">您有订单将超时取消，请及时支付</string>
+    <string name="bus_direct_city_line">直通车</string>
+    <string name="bus_city_line">城际快线</string>
+    <string name="bus_direct_appoint">跨城约车</string>
+    <string name="bus_direct_gangao">港澳快线</string>
+    <string name="bus_direct_aircraft">机场快线</string>
+    <string name="bus_direct_rent_car">我要包车</string>
+    <string name="bus_check_result">查询结果</string>
+    <string name="bus_city_water">流水班线</string>
+    <string name="ticket_know">我知道了</string>
+    <string name="ticket_never_know">不再提示</string>
+
+    <!--tradition 传统汽车票-->
+    <!--汽车票-->
+    <string name="ll_view_please_select">请选择出发地</string>
+    <string name="ll_view_please_select_end">请选择到达地</string>
+    <string name="ll_view_not_dredge">亲，%1$s暂未开通哦</string>
+    <string name="bus_start_city">出发城市</string>
+    <string name="bus_arrive_city">到达城市</string>
+
+    <!--车次列表-->
+     <!--传统-->
+    <string name="bus_list_pop_forenoon">上午 (06:00-11:59)</string>
+    <string name="bus_list_pop_noon">凌晨 (00：00-05:59)</string>
+    <string name="bus_list_pop_afternoon">下午 (12:00-17:59)</string>
+    <string name="bus_list_pop_night">晚上 (18:00-23:59)</string>
+    <string name="bus_list_station">站点筛选</string>
+    <string name="bus_list_price">价格</string>
+    <string name="bus_list_time_section">发车时段</string>
+    <string name="bus_list_can_sell">可售班次</string>
+    <string name="bus_list_all_sell">全部班次</string>
+    <string name="bus_list_pop_up_station">上\n车\n点</string>
+    <string name="bus_list_pop_down_station">下\n车\n点</string>
+    <string name="bus_list_pop_low">价格从高到低</string>
+    <string name="bus_list_pop_improve">价格从低到高</string>
+    <string name="bus_list_pop_unlimited">不限</string>
+    <string name="bus_list_stop">暂停</string>
+    <string name="bus_list_have_ticket">有票</string>
+    <string name="bus_list_sale_all">售罄</string>
+    <string name="bus_list_internet_stop">网上停售</string>
+    <string name="bus_list_run_time">约%1$s小时</string>
+    <string name="bus_title_time">共%1$s班次</string>
+    <string name="bus_start_end">%1$s-%2$s</string>
+
+
+    <!--新业务/城际快线 详情/订单-->
+    <string name="direct_title">查询结果</string>
+    <string name="direct_business_score">%1$s分</string>
+    <string name="direct_fill_service">(服务费￥%1$s)</string>
+    <string name="direct_type_buy">票务类型</string>
+    <string name="direct_insurance">购买保险乘客</string>
+    <string name="direct_max_buy">*每个订单限购3张票</string>
+    <string name="direct_fill_phone">手机号码: </string>
+    <string name="direct_fill_get_ticket">取票人信息</string>
+
+    <!--时间-->
+    <string name="date_today">今天</string>
+    <string name="date_tomorrow">明天</string>
+    <string name="date_after_tomorrow">后天</string>
+    <string name="date_monday">星期一</string>
+    <string name="date_tuesday">星期二</string>
+    <string name="date_wednesday">星期三</string>
+    <string name="date_thursday">星期四</string>
+    <string name="date_friday">星期五</string>
+    <string name="date_saturday">星期六</string>
+    <string name="date_sunday">星期日</string>
+    <string name="date_prev_day">前一天</string>
+    <string name="date_next_day">后一天</string>
+
+    <!--火车票首页-->
+    <string name="train_index_start">请输入出发地</string>
+    <string name="train_index_end">请输入到达地</string>
+    <string name="train_index_date">请选择出发日期</string>
+    <string name="train_index_only_speed">只看高铁动车</string>
+    <string name="train_start_city_null">出发城市不能为空！</string>
+    <string name="train_end_city_null">到达城市不能为空！</string>
+    <string name="train_city_hot">热门</string>
+    <string name="train_city_history">历史</string>
+    <string name="train_binding_12308">绑定 12306帐号，购票成功率更高！</string>
+    <string name="train_binding_account">已绑定12306账号:%s</string>
+    <string name="train_binding_tips">优先使用此12306账号购票，账号错误再使用12308账号购票</string>
+    <string name="train_start_hint">出发地(中文/拼音/首字母)</string>
+    <string name="train_end_hint">到达地(中文/拼音/首字母)</string>
+
+    <!--火车票车次列表-->
+    <string name="train_list_select_type">选车型</string>
+    <string name="train_list_select_seat">选座位</string>
+    <string name="train_list_select_station">选站点</string>
+    <string name="train_list_select_time">选时间</string>
+    <string name="train_list_sure">确定</string>
+    <string name="train_list_cancel">取消</string>
+    <string name="train_list_station_up">出发站</string>
+    <string name="train_list_station_down">到达站</string>
+    <string name="train_list_start_time">发时</string>
+    <string name="train_list_end_time">到时</string>
+    <string name="train_list_sort">排序</string>
+    <string name="train_list_only_ticket">只看有票</string>
+    <string name="train_list_all_ticket">全部车票</string>
+    <string name="train_list_adapter_order">站序</string>
+    <string name="train_list_adapter_name">站名</string>
+    <string name="train_list_adapter_arrive">到时</string>
+    <string name="train_list_adapter_start">发时</string>
+    <string name="train_list_adapter_wait">停留</string>
+    <string name="train_list_select_high">高铁动车(G/D/C)</string>
+    <string name="train_list_select_speed">特快直达(T/Z)</string>
+    <string name="train_list_select_common">普通快速(K/S)</string>
+    <string name="train_list_select_else">其他</string>
+    <string name="train_list_type_soft">软卧</string>
+    <string name="train_list_type_soft_up">软卧(下)</string>
+    <string name="train_list_high_type_soft">高级软卧</string>
+    <string name="train_list_hard_type">硬卧</string>
+    <string name="train_list_hard_type_up">硬卧(下)</string>
+    <string name="train_list_change_order">改签票不能更换出发地!</string>
+    <string name="train_list_no_data">没有筛选的数据</string>
+    <string name="ticket_line_up_station">上\n车\n点</string>
+    <string name="ticket_line_down_station">下\n车\n点</string>
+    <string name="train_station">车站</string>
+    <string name="train_line_price">价格</string>
+    <string name="train_line_shaixuan">筛选</string>
+    
+    <!--火车票-->
+    <string name="train_choose_seat">选择座席</string>
+    <string name="train_choose_fillin">填写订单</string>
+    <string name="ins_title">乘客人身意外伤害保险</string>
+    <string name="ins_select_tag">暂不购买保险</string>
+    <string name="train_ins">确定购买保险</string>
+    <string name="train_no_ins">暂不购买保险</string>
+    <string name="train_part">%1$s/份-%2$s</string>
+    <string name="train_desc">%1$s ￥%2$s/份</string>
+
+    <!--城市 汽车票 火车票-->
+    <!-- 城市 -->
+    <string name="city_start">出发城市</string>
+    <string name="city_arrive">到达城市</string>
+    <string name="city_search_hint">请输入%1$s</string>
+    <string name="city_get_position">暂时无法获取定位，请点击重试</string>
+    <string name="city_line_hot">热门</string>
+    <string name="city_line_up">上车点</string>
+    <string name="city_line_down">下车点</string>
+
+    <!--港澳快线/机场快线-->
+    <string name="gangao_button">查询</string>
+    <string name="gangao_select_city">选择城市</string>
+    <string name="aircraft_select_city">选择机场</string>
+    <string name="aircraft_city">机场快线目前只开通以下城市</string>
+    <!--约租车-->
+    <string name="nac_list_title">约租车</string>
+    <string name="nac_search_go_line">已开通城市</string>
+    <string name="nac_service_time1">尊敬的乘客你好，您选择的出发时间不在服务范围内，请重新选择</string>
+    <string name="nac_service_time2">该线路的服务时间为：</string>
+    <string name="nac_overbooking">马上约车</string>
+    <string name="nac_detail_sure">确认下单</string>
+    <string name="nac_from_where">您从哪里出发？</string>
+    <string name="nac_to_where">您要去哪里？</string>
+    <string name="nac_no_go">当前城市未开通约租车服务，请选择已开通城市或其他出行方式</string>
+    <string name="nac_search_condition_start">请选择出发地</string>
+    <string name="nac_search_condition_end">请选择到达地</string>
+    <string name="nac_no_use_coupon">暂不使用</string>
+    <string name="nac_no_service">无服务时间</string>
+    <string name="nac_no_start_time">请选择出发时间</string>
+    <string name="nac_select_time">请选择出发时间</string>
+    <string name="nac_select_end">请选择目的地</string>
+    <string name="nac_select_start">请选择出发地</string>
+    <string name="start_city">出发城市</string>
+    <string name="arrive_city">到达城市</string>
+    <string name="search_city_hint">请输入中文/全拼/拼音</string>
+    <!--乘客列表-->
+    <string name="passenger_add">添加乘客</string>
+    <string name="passenger_select">选择乘客</string>
+    <string name="passenger_modify">修改乘客</string>
+    <string name="passenger_ok">确定</string>
+    <string name="passenger_delete">删除</string>
+    <string name="passenger_5">"亲，最多添加五位乘客哦"</string>
+    <string name="passenger_3">"亲,最多可购买三张票哦!"</string>
+    <string name="passenger_supplement">信息待完善请编辑补充</string>
+    <string name="passenger_prompt">温馨提示</string>
+    <string name="passenger_prompt_1">1.儿童票、残疾人、学生票、军人票需在车站购买</string>
+    <string name="passenger_prompt_2">2.暂时仅支持身份证购票,请填写真实信息</string>
+    <string name="passenger_number">手机号码</string>
+    <string name="passenger_number_required">请输入您的手机号码</string>
+    <string name="passenger_name_required">请输入您的真实姓名</string>
+    <string name="passenger_identity_card">身份证</string>
+    <string name="passenger_credentials_required">请输入您的身份证号码</string>
+    <string name="passenger_required_effective">请输入有效证件号码</string>
+    <string name="passenger_credentials_no">证件号码</string>
+    <string name="passenger_credentials_type">证件类型</string>
+    <string name="passenger_sure">确定添加</string>
+    <string name="passenger_type">旅客类型</string>
+    <string name="passenger_adult">成人票</string>
+    <string name="passenger_edit_student">*学生票仅支持购买火车票</string>
+    <string name="passenger_buy_insurance">购买保险</string>
+    <string name="passenger_description">取票限有效身份证\n儿童票、残疾人、军人票请至出发车站购买</string>
+    <string name="edit_province">请选择一个省份</string>
+    <string name="edit_school">请选择一个学校</string>
+    <string name="edit_xuezhi">请选择学制</string>
+    <string name="edit_student_num">请输入学号</string>
+    <string name="edit_select_year">请选择入学年份</string>
+    <string name="edit_select_area">优惠区间不能为空</string>
+    <string name="edit_city_area">输入关键字搜索</string>
+    <string name="edit_input_coupon">请输入优惠卡号</string>
+    <string name="edit_search_school">搜索大学名称</string>
+    <string name="edit_search_province">搜索大学所在省份</string>
+    <string name="edit_select_province">请先选择省份</string>
+    <string name="edit_select_school">请选择一所学校</string>
+    <string name="edit_select_student">*学生票仅支持购买火车票</string>
+    <string name="edit_coupon_chinese">简码/汉字</string>
+    <string name="edit_xuezhi_3">3年</string>
+    <string name="edit_xuezhi_4">4年</string>
+    <string name="edit_xuezhi_5">5年</string>
+    <string name="edit_xuezhi_6">6年</string>
+    <string name="edit_xuezhi_7">7年</string>
+    <string name="edit_xuezhi_8">8年</string>
+    <string name="edit_xuezhi_9">9年</string>
+    <string name="edit_train_students">学生票</string>
+    <string name="edit_train_child">儿童票</string>
+    <string name="edit_train_person">成人票</string>
+
+    <!--传统汽车票填写订单-->
+    <string name="bookTicket_show_time">当前离开车时间还有%1$s， 建议您提前出发</string>
+    <string name="bookTicket_service_fee_unit">(服务费:¥%1$s/张)</string>
+    <string name="bookTicket_unit_rmb">单价: ¥</string>
+    <string name="bookTicket_add_passenger">添加乘客</string>
+    <string name="bookTicket_max_buy">每个订单限购3张票</string>
+    <string name="bookTicket_child_desc">携童说明</string>
+    <string name="bookTicket_ticket_info">取票人信息</string>
+    <string name="bookTicket_ticket_coupon">使用优惠券</string>
+    <string name="bookTicket_submit_order">&#160;&#160;&#160;&#160;提交订单&#160;&#160;&#160;&#160;</string>
+    <string name="bookTicket_yuan">￥</string>
+    <string name="bookTicket_pop_full">全价票</string>
+    <string name="bookTicket_pop_half">半价票</string>
+    <string name="bookTicket_pop_insurance">保险</string>
+    <string name="bookTicket_pop_service">服务费</string>
+    <string name="bookTicket_count">共(%1$s)人</string>
+    <string name="bookTicket_pop_quan">优惠&#160;&#160;&#160;&#160;</string>
+    <string name="bookTicket_pop_count">￥%1$s x%2$d</string>
+    <string name="bookTicket_pop_coupon">-￥%1$s</string>
+    <string name="bookTicket_title">填写订单</string>
+    <string name="bookTicket_advance45">12308提醒你提前%1$s分钟取票</string>
+    <string name="bookTicket_backup">如所选车次无票,同意更换%1$s:%2$s ~ %3$s:%4$s 间车次</string>
+    <string name="bookTicket_child_content">每一成人旅客可免费携带一名1.2米以下儿童乘车，但不供给座位，携带免费乘车儿童超过一人或
+    要求供给座位时，须购买儿童票，当客运班车携童票已达到核定载客人数的10%时，旅客应选乘其它班次或购买儿童票。</string>
+    <string name="bookTicket_all">全价票</string>
+    <string name="bookTicket_half">半价票</string>
+    <string name="bookTicket_child">儿童票</string>
+    <string name="bookTicket_coupon">优惠票</string>
+    <string name="bookTicket_add">请添加乘客</string>
+    <string name="bookTicket_person">请选择取票人</string>
+
+    <!--保险/一个 title+一个 list-->
+    <string name="title_list_insurance">乘客意外伤害保险</string>
+    <string name="title_list_station">汽车站</string>
+
+    <!--支付-->
+    <string name="pay_cancel">亲，您已取消支付了哦!</string>
+    <string name="pay_success">支付成功</string>
+    <string name="pay_success_desc">正在出票，请稍后..</string>
+    <string name="pay_fail">支付失败</string>
+    <string name="pay_friend_tips">友情提示</string>
+    <string name="pay_confirm_cancel">亲，您确定暂不支付吗?</string>
+    <string name="pay_fail_desc">请放心支付，我们目前已支持支付宝、微信、QQ钱包、银联支付等方式,其他支付方式正在开发中！</string>
+    <string name="pay_again">重新支付</string>
+    <string name="pay_already">我已支付</string>
+    <string name="pay_remain_time">您已成功提交订单，请于%1$s分%2$s秒内完成支付</string>
+    <string name="pay_submit">&#160;&#160;&#160;&#160;立即支付&#160;&#160;&#160;&#160;</string>
+    <string name="modes_of_payment">选择支付方式</string>
+    <string name="pay_title">请在%1$s分%2$s秒内完成支付，否则系统将取消本次交易 </string>
+    <string name="pay_weixin">微信支付</string>
+    <string name="pay_weixin_subtitle">推荐 已安装微信客户端的用户使用</string>
+
+    <!--个人中心-->
+    <string name="myinfo_title">注册 、登录</string>
+    <string name="myinfo_subtitle">请注册或登录12308购票</string>
+    <string name="myinfo_passenger">常用乘客</string>
+    <string name="myinfo_share">好友分享</string>
+    <string name="myinfo_ask">我的提问</string>
+    <string name="myinfo_feedback">意见反馈</string>
+    <string name="myinfo_helpcenter">帮助中心</string>
+
+    <!--设置页面-->
+    <string name="setting_changepsw">修改密码</string>
+    <string name="setting_about12308">关于12308</string>
+    <string name="setting_nocharge">免责申明</string>
+    <string name="setting_userproto">用户协议</string>
+    <string name="setting_lineway">联系方式</string>
+    <string name="setting_lineqq">联系QQ客服</string>
+    <string name="setting_logout">退出登录</string>
+    <string name="setting_version">版本:   V%s</string>
+    <string name="logout_tips">退出提示</string>
+    <string name="confirm_logout_tips">亲,您确定要退出登录吗?</string>
+
+    <!--修改密码-->
+    <string name="modify_password">修改密码</string>
+    <string name="pwd_old">&#160;&#160;&#160;&#160;原密码:</string>
+    <string name="pwd_new">&#160;&#160;&#160;&#160;新密码:</string>
+    <string name="re_pwd">确认密码:</string>
+    <string name="pwd_old_required">请输入原密码</string>
+    <string name="pwd_new_required">请输入新密码</string>
+    <string name="re_newpwd_required">请再输入一次新密码</string>
+    <string name="pwd_hint">6-20位字符</string>
+    <string name="pwd_format_error">请输入6-20位字符</string>
+
+    <!-- 登录 login -->
+    <string name="login">登录</string>
+    <string name="user_name_hind">请输入您的手机号</string>
+    <string name="user_name_required">请输入账号</string>
+    <string name="pwd_required">请输入密码</string>
+    <string name="pwd_not_equal">两次输入的密码不一致</string>
+    <string name="pwd_not_equal_old">新密码与旧密码不能一样</string>
+    <string name="valid_code_required">请输入验证码</string>
+    <string name="login_self">记住密码</string>
+    <string name="forget_pwd">忘记密码?</string>
+    <string name="other_login">合作账号登录</string>
+    <string name="register">注册</string>
+    <string name="not_install_wx">亲,要先安装微信才能使用微信支付哦</string>
+    <string name="not_install_wx_login">亲,要先安装微信才能使用微信登录哦</string>
+    <string name="not_install_qq">亲,要先安装QQ才能使用在线客服哦</string>
+    <string name="not_install_qq_login">亲,要先安装QQ才能使用QQ登录哦</string>
+
+    <!-- 忘记密码 -->
+    <string name="find_pwd">重置密码</string>
+    <string name="froget_phone_hint">请输入您的手机号</string>
+    <string name="get_verify">获取验证码</string>
+    <string name="remain_time">剩余 %1$ds</string>
+    <string name="re_get_verify">重新获取</string>
+    <string name="new_pwd_hint">6-20位字符</string>
+    <string name="confirm_new_pwd_hint">6-20位字符</string>
+
+    <!-- 注册 register -->
+    <string name="user_regist">手机快速注册</string>
+    <string name="mobile_required">请填写手机号码</string>
+    <string name="not_phone_">请填写正确手机号码</string>
+    <string name="register_succes">注册成功</string>
+    <string name="agreeDeal">我已阅读并同意</string>
+    <string name="agree12308Deal">《12308 用户使用协议》</string>
+    <string name="rgPasswordDisplay">6-20位字符</string>
+
+    <!--列表-->
+    <string name="loading">正在努力加载&#8230;</string>
+    <string name="finish_all">数据已全部加载</string>
+    <string name="total_info">总共%1$s条，当前已显示%2$s条</string>
+    <string name="inttostring">%s</string>
+    <string name="orderlist_timetostart">%s出发</string>
+    <string name="orderlist_getticket_num">取票号：</string>
+    <string name="orderlist_getticket_orderid">订单号：</string>
+    <string name="orderlist_toyuezuche">前往约租车</string>
+    <string name="orderlist_toyuezuche_tips">空空如也,赶紧去约租车吧</string>
+    <string name="train_price_pop" formatted="false">¥%sx%s</string>
+
+    <!--汽车票 火车票 出发城市-->
+    <string name="city_history">历史城市</string>
+    <string name="city_hot">热门城市</string>
+
+    <!--下拉刷新-->
+    <string name="pullUpToRefresh">上拉加载更多</string>
+    <string name="pullDownToRefresh">下拉刷新</string>
+    <string name="releaseToRefresh">释放开始加载</string>
+    <string name="pullLoading">正在努力加载&#8230;</string>
+
+
+    <!--火车票订单详情-->
+    <string name="train_order_details_top_to_pay">抢票成功!请在09分59秒内完成支付</string>
+    <string name="train_order_details_top_operate_details">详情</string>
+    <string name="train_order_details_normal_ticket_order_number">取票号:</string>
+    <string name="train_order_details_mobile">联系手机</string>
+    <string name="train_order_details_adult_insurance">成人保险</string>
+    <string name="train_order_details_child_insurance">儿童保险</string>
+    <string name="train_order_details_refund_o_endorse">退票/改签须知</string>
+    <string name="train_order_details_total_count">(共0人)</string>
+    <string name="train_order_details_total_amount">订单总价</string>
+    <string name="train_order_details_right_bt_to_pay">立即支付</string>
+    <string name="train_pay_title">已为您抢票成功，请在%1$s分%2$s秒内完成支付</string>
+    <string name="order_details">订单详情</string>
+
+    <!-- 火车票下单页面-->
+    <string name="choose_seat_buy">购买</string>
+    <string name="fill_in_order_submit_order">提交订单</string>
+    <string name="fill_in_order_background">查看订单列表</string>
+    <string name="fill_in_order_background_change">查看订单列表</string>
+    <string name="choose_seat_tips">没有符合条件的车次信息</string>
+
+    <!--12306账号管理-->
+    <string name="train_account_title">12306账号管理</string>
+    <string name="train_account_login">点击绑定</string>
+    <string name="train_account_nodatatips">您尚未绑定12306账号</string>
+
+    <!--个人资料-->
+    <string name="account_binding">帐号绑定</string>
+    <string name="account_phone">手机号码</string>
+    <string name="account_pic">头像</string>
+    <string name="account_name">姓名</string>
+    <string name="account_person">身份证号</string>
+    <string name="account_binding_phone">绑定手机</string>
+    <string name="account_change_phone">更换手机</string>
+    <string name="account_change_phone_num">更换手机号码</string>
+    <string name="account_password">登录密码</string>
+    <string name="account_config_password">请输入登录密码</string>
+    <string name="account_new_phone">新手机&#160;&#160;&#160;&#160;</string>
+    <string name="account_validate_code">验证码&#160;&#160;&#160;&#160;</string>
+    <string name="account_new_password_null">密码不能为空</string>
+    <string name="account_new_mobile_null">手机号不能为空且必须是11位</string>
+    <string name="account_validate_null">验证码不能为空</string>
+    <string name="account_change_certificate">修改身份证</string>
+    <string name="account_input_certificate">请输入您的证件号码</string>
+    <string name="account_count_eighth">不要超过18个阿拉伯数字</string>
+    <string name="account_change_name">修改姓名</string>
+    <string name="account_input_name">请输入您的姓名</string>
+    <string name="account_count_ten">不要超过10个汉字</string>
+    <string name="account_null">输入不能为空</string>
+
+    <!--优惠-->
+    <string name="coupon_order">优惠口令</string>
+    <string name="coupon_my_ticket">我的优惠券</string>
+    <string name="coupon_use_rule">优惠券使用规则</string>
+    <string name="coupon_use_code">输入的字符只能是英文、数字,长度为8&#8211;32位</string>
+    <string name="coupon_use_code_null">优惠口令不能为空!</string>
+
+</resources>

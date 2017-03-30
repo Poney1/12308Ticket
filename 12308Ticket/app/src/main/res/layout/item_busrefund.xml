@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/margin_80px"
+              android:background="@color/white"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_80px"
+        android:gravity="center_vertical"
+        android:text="乘客1："
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/textsize_30px"/>
+
+    <TextView
+        android:id="@+id/tv_busrefund_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_80px"
+        android:layout_marginLeft="@dimen/margin_10px"
+        android:gravity="center_vertical"
+        android:text="张三"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/textsize_30px"/>
+
+    <TextView
+        android:id="@+id/tv_busrefund_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_80px"
+        android:layout_marginLeft="@dimen/margin_20px"
+        android:gravity="center_vertical"
+        android:text="15888888888"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/textsize_30px"/>
+
+    <TextView
+        android:id="@+id/tv_busrefund_ticketstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_80px"
+        android:layout_marginLeft="@dimen/margin_20px"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="已取票"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/textsize_30px"/>
+
+    <CheckBox
+        android:id="@+id/cb_busrefund_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slt_insurance"
+        android:button="@null"/>
+
+</LinearLayout>

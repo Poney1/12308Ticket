@@ -1,0 +1,205 @@
+<resources>
+
+    <style name="AppTheme" parent="@android:style/Theme.NoTitleBar">
+        <!-- translucent system bars -->
+        <item name="android:windowBackground">@color/window_background_color</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <!--公共部分-->
+    <!--底部按钮样式-->
+    <style name="menu_button_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/color_gray_to_red</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">false</item>
+    </style>
+    <!-- 动画效果 -->
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+    <!-- 进度 -->
+    <style name="myProgressBarNormal" parent="@android:style/Widget.ProgressBar">
+        <item name="android:maxWidth">@dimen/normal_progress_size</item>
+        <item name="android:maxHeight">@dimen/normal_progress_size</item>
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_indicator_normal</item>
+        <item name="android:indeterminateDuration">1800</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:minWidth">@dimen/normal_progress_size</item>
+        <item name="android:minHeight">@dimen/normal_progress_size</item>
+    </style>
+    <!-- 对话框文本 -->
+    <style name="dialogTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/loading_dialog_text_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--对话框样式-->
+    <style name="loadingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--通用加载对话框-->
+    <!-- 对话框 -->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_common_mm_trans</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@drawable/dialog_common_mm_trans</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- 进度 -->
+    <style name="MyProgressBarNormal" parent="@android:style/Widget.ProgressBar">
+        <item name="android:maxWidth">@dimen/normal_progress_size</item>
+        <item name="android:maxHeight">@dimen/normal_progress_size</item>
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_indicator_normal</item>
+        <item name="android:indeterminateDuration">1800</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:minWidth">@dimen/normal_progress_size</item>
+        <item name="android:minHeight">@dimen/normal_progress_size</item>
+    </style>
+    <!-- 启动页面主题 -->
+    <style name="Theme_Launcher" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- 分割线 -->
+    <style name="split_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/c_dddddd</item>
+    </style>
+
+    <!--textview统一样式-->
+    <!--出发到达城市 LinearLayout 样式-->
+    <style name="BusStartEnd">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:addStatesFromChildren">true</item>
+        <item name="android:background">@drawable/slt_f0f0f0_to_transparent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <!--app风格通用button样式-->
+    <style name="customButton" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/btn_red_new</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--没有间隔虚线 去掉点击 选择listView-->
+    <style name="listViewNoDivider">
+        <item name="android:divider">@null</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+    </style>
+
+    <!--dddddd  的虚线listView-->
+    <style name="listViewDivider">
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:divider">@color/c_dddddd</item>
+    </style>
+
+    <!--没有间隔虚线 去掉点击 选择gridView-->
+    <style name="gridViewNoDivider">
+        <item name="android:divider">@null</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+    </style>
+
+    <!-- 汽车票预定,日期选择界面 -->
+    <style name="customTextView" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:textColor">@color/c_333333</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:drawablePadding">6dp</item>
+    </style>
+
+    <!-- 一串文字加 一个向右的箭头-->
+    <style name="rightTextView" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/c_323232</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- listview样式 -->
+    <style name="customListView" parent="@android:style/Widget.ListView">
+        <item name="android:scrollbarSize">10.0dip</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_handle_vertical</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0.0px</item>
+        <item name="android:scrollingCache">false</item>
+    </style>
+
+    <!--约租车 -->
+    <style name="customTextView_nac" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:textColor">@color/c_333333</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:drawablePadding">4dp</item>
+    </style>
+    <!--约租车高度 -->
+    <style name="linearLayout_nac">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:addStatesFromChildren">true</item>
+        <item name="android:background">@drawable/slt_f0f0f0_to_transparent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <!--edittext-->
+    <style name="customEditView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+</resources>

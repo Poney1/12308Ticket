@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+<layer-list
+    android:shape="rectangle" >
+
+    <!-- 框颜色值 -->
+    <item>
+        <shape>
+            <solid android:color="@color/c_cccccc" />
+        </shape>
+    </item>
+    <!-- 主体背景颜色值 -->
+    <item
+        android:top="1px"
+        android:bottom="1px">
+        <shape>
+            <solid android:color="@color/c_e5e5e5" />
+
+            <corners
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp" />
+
+            <padding
+                android:bottom="0dp"
+                android:left="0dp"
+                android:right="0dp"
+                android:top="0dp" />
+        </shape>
+    </item>
+
+</layer-list>
+</item>
+    <item android:state_pressed="false">
+        <layer-list
+    android:shape="rectangle" >
+
+    <!-- 框颜色值 -->
+    <item>
+        <shape>
+            <solid android:color="@color/c_cccccc" />
+        </shape>
+    </item>
+    <!-- 主体背景颜色值 -->
+    <item
+        android:top="1px"
+        android:bottom="1px">
+        <shape>
+            <solid android:color="@color/white" />
+
+            <corners
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp" />
+
+            <padding
+                android:bottom="0dp"
+                android:left="0dp"
+                android:right="0dp"
+                android:top="0dp" />
+        </shape>
+    </item>
+
+</layer-list></item>
+
+</selector>

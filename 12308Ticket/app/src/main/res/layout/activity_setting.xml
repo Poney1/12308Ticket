@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:mudo="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <include layout="@layout/common_lpl"/>
+
+    <LinearLayout
+        android:id="@+id/ll_setting_modifypsw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+            android:id="@+id/pcl_setting_modifypsw"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_90px"
+            android:background="@drawable/bg_button_click"
+            android:gravity="center_vertical"
+            mudo:text="@string/setting_changepsw"
+            />
+
+        <include layout="@layout/common_lpl"/>
+    </LinearLayout>
+
+
+    <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+        android:id="@+id/pcl_setting_about12308"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        mudo:text="@string/setting_about12308"
+        />
+
+    <include layout="@layout/common_shortline"/>
+
+    <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+        android:id="@+id/pcl_setting_shengming"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        mudo:text="@string/setting_nocharge"
+        />
+
+    <include layout="@layout/common_shortline"/>
+
+    <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+        android:id="@+id/pcl_setting_userprotocol"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        mudo:text="@string/setting_userproto"
+        />
+
+    <include layout="@layout/common_lpl"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_20px"
+        android:paddingRight="@dimen/margin_20px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="联系方式"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/textsize_30px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0755-82867116"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/textsize_28px"/>
+    </LinearLayout>
+
+    <include layout="@layout/common_shortline"/>
+
+    <com.wxws.myticket.my.widgets.view.PersonCommonLayout
+        android:id="@+id/pcl_setting_qqlink"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90px"
+        android:background="@drawable/bg_button_click"
+        android:gravity="center_vertical"
+        mudo:text="@string/setting_lineqq"
+        />
+
+    <include layout="@layout/common_line"/>
+
+    <LinearLayout
+        android:id="@+id/ll_setting_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_24px"/>
+
+        <include layout="@layout/common_line"/>
+
+        <TextView
+            android:id="@+id/tv_setting_logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_90px"
+            android:background="@drawable/bg_button_click"
+            android:gravity="center"
+            android:text="@string/setting_logout"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/textsize_32px"/>
+
+        <include layout="@layout/common_line"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_setting_vesrion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:paddingBottom="@dimen/margin_60px"
+        android:text="版本号"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/textsize_30px"/>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/c_f0f0f0"
+        android:layout_height="@dimen/margin_20px"/>
+
+    <View
+       style="@style/split_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_30px"
+            android:layout_marginLeft="@dimen/margin_24px"
+            android:layout_marginTop="@dimen/margin_30px"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_iteminsurance_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="汽车出行保险"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/textsize_30px" />
+
+            <TextView
+                android:id="@+id/tv_iteminsurance_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30px"
+                android:text="汽车出行保险"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/textsize_26px" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_iteminsurance_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥30X2"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/textsize_30px" />
+
+        <CheckBox
+            android:id="@+id/cb_iteminsurance_ischoosed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_70px"
+            android:layout_marginRight="@dimen/margin_20px"
+            android:background="@drawable/slt_insurance"
+            android:button="@null" />
+    </LinearLayout>
+
+    <View
+        style="@style/split_line"/>
+
+</LinearLayout>

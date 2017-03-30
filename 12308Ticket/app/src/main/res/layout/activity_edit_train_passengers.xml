@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_header"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f0f0f0"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_20px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_my"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_name_width"
+                        android:layout_height="wrap_content"
+                        android:text="姓名"
+                        android:textColor="@color/app_text_color_gary"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <com.wxws.myticket.my.widgets.view.ClearEditText
+                        android:id="@+id/et_passenger_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/passenger_name_required"
+                        android:singleLine="true"
+                        android:textColor="@color/c_333333"
+                        android:textColorHint="@color/c_cccccc"
+                        android:textCursorDrawable="@drawable/clear_blue_cursor"
+                        android:textSize="@dimen/textsize_30px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="18dp">
+
+                    <TextView
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:text="性别"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/c_f0f0f0"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_boy"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_boy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawableLeft="@drawable/btn_checkbox"
+                                android:drawablePadding="@dimen/margin_30px"
+                                android:gravity="center_vertical"
+                                android:text="男"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_30px" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/c_dddddd" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_girl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_girl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawableLeft="@drawable/btn_checkbox"
+                                android:drawablePadding="@dimen/margin_30px"
+                                android:gravity="center_vertical"
+                                android:text="女"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/textsize_30px" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_name_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/passenger_credentials_type"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <TextView
+                        android:id="@+id/tv_edit_passenger_type"
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/margin_20px"
+                        android:drawableRight="@mipmap/passenger_down_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/passenger_identity_card"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_30px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_name_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/passenger_credentials_no"
+                        android:textColor="@color/app_text_color_gary"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <com.wxws.myticket.my.widgets.view.ClearEditText
+                        android:id="@+id/et_passenger_cert_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/passenger_required_effective"
+                        android:lines="1"
+                        android:maxLength="18"
+                        android:textColor="@color/c_333333"
+                        android:textColorHint="@color/c_cccccc"
+                        android:textCursorDrawable="@drawable/clear_blue_cursor"
+                        android:textSize="@dimen/textsize_30px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_name_width"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="@string/passenger_number"
+                        android:textColor="@color/app_text_color_gary"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <com.wxws.myticket.my.widgets.view.ClearEditText
+                        android:id="@+id/et_passenger_mobile_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/passenger_number_required"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="11"
+                        android:textColor="@color/c_333333"
+                        android:textColorHint="@color/c_cccccc"
+                        android:textCursorDrawable="@drawable/clear_blue_cursor"
+                        android:textSize="@dimen/textsize_30px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:id="@+id/ll_select_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_name_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/passenger_type"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <TextView
+                        android:id="@+id/tv_edit_passenger_passenger_type"
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/margin_20px"
+                        android:drawableRight="@mipmap/passenger_down_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/passenger_adult"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <TextView
+                        android:id="@+id/tv_ticket_school"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/passenger_edit_student"
+                        android:textColor="@color/app_style"
+                        android:textSize="@dimen/textsize_24px"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_editpassengers_student"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20px"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="wrap_content"
+                        android:text="学校所在省份"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <TextView
+                        android:id="@+id/tv_select_province"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@mipmap/ic_into"
+                        android:gravity="center_vertical"
+                        android:text="填写学校所在省份"
+                        android:textColor="@color/c_999999"
+                        android:textSize="@dimen/textsize_24px" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="wrap_content"
+                        android:text="学校名称"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <TextView
+                        android:id="@+id/tv_choose_school"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@mipmap/ic_into"
+                        android:gravity="center_vertical"
+                        android:hint="@string/edit_select_school"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_30px" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="wrap_content"
+                        android:text="学号"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <EditText
+                        android:id="@+id/et_input_stu_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入学号"
+                        android:textColor="@color/c_333333"
+                        android:textColorHint="@color/c_cccccc"
+                        android:textSize="@dimen/textsize_30px" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="wrap_content"
+                        android:text="入学年份"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <TextView
+                        android:id="@+id/tv_choose_year"
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/margin_20px"
+                        android:drawableRight="@mipmap/passenger_down_arrow"
+                        android:gravity="center_vertical"
+                        android:text="2010"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_30px" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_name_width"
+                        android:layout_height="wrap_content"
+                        android:text="学制"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <TextView
+                        android:id="@+id/tv_choose_xuezhi"
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/margin_20px"
+                        android:drawableRight="@mipmap/passenger_down_arrow"
+                        android:gravity="center_vertical"
+                        android:text="3年"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_30px" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="wrap_content"
+                        android:text="优惠卡号"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <EditText
+                        android:id="@+id/et_input_coupon_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入优惠卡号"
+                        android:textColor="@color/c_333333"
+                        android:textColorHint="@color/c_cccccc"
+                        android:textSize="@dimen/textsize_30px" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_90px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="@dimen/passenger_content_width"
+                        android:layout_height="wrap_content"
+                        android:text="优惠区间"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <TextView
+                        android:id="@+id/tv_from_place"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/c_f0f0f0"
+                        android:gravity="center"
+                        android:hint="@string/edit_coupon_chinese"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <View
+                        android:layout_width="@dimen/margin_30px"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/margin_20px"
+                        android:layout_marginRight="@dimen/margin_20px"
+                        android:background="@color/c_dddddd" />
+
+                    <TextView
+                        android:id="@+id/tv_to_place"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/c_f0f0f0"
+                        android:gravity="center"
+                        android:hint="@string/edit_coupon_chinese"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/textsize_30px" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_passenger_save"
+                style="@style/customButton"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="@dimen/margin_20px"
+                android:text="@string/passenger_sure" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_passenger_desc"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/c_fbf8dc"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="4sp"
+                android:paddingLeft="16sp"
+                android:paddingTop="8sp"
+                android:text="@string/passenger_description"
+                android:textColor="@color/c_ff5b47"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

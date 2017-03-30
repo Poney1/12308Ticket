@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/c_f0f0f0"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_120px">
+
+        <TextView
+            android:layout_marginLeft="@dimen/margin_20px"
+            android:text="金额"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/textsize_30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/et_walletrecharge_incomemoney"
+            android:layout_marginLeft="@dimen/textsize_30px"
+            android:background="@color/white"
+            android:hint="请输入充值金额"
+            android:textColorHint="@color/c_999999"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/textsize_30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <include layout="@layout/common_line"/>
+
+    <Button
+        android:id="@+id/bt_walletrecharge_income"
+        android:layout_marginTop="@dimen/margin_90px"
+        android:layout_marginRight="@dimen/margin_20px"
+        android:layout_marginLeft="@dimen/margin_20px"
+        android:background="@drawable/btn_red_new"
+        android:text="充值"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_36px"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90px"/>
+</LinearLayout>

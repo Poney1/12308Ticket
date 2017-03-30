@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓    名："
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/textsize_28px"/>
+
+            <TextView
+                android:id="@+id/tv_passenger_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13823187120"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/textsize_28px"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份证："
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/textsize_28px"/>
+
+            <TextView
+                android:id="@+id/tv_passenger_certno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13823187120"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/textsize_28px"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_20px"
+            android:paddingTop="@dimen/margin_20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手    机："
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/textsize_28px"/>
+
+            <TextView
+                android:id="@+id/tv_passenger_mobie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13823187120"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/textsize_28px"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_passenger_isfull"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_34px"
+            android:background="@drawable/bg_fullorhalf"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_8px"
+            android:paddingRight="@dimen/margin_8px"
+            android:text="全价票"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_24px"/>
+
+        <TextView
+            android:id="@+id/tv_passenger_insurancenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20px"
+            android:text="意外保险1份"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/textsize_24px"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

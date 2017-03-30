@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_1a000000"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/dialog_bg_normal"
+                  android:gravity="center_horizontal"
+                  android:minWidth="240dp"
+                  android:orientation="vertical"
+                  android:padding="0dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="45dip"
+            android:text="@string/find_new_version"
+            android:textColor="@color/c_ff5d48"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/dialog_message"
+            style="@style/dialogTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:lineSpacingExtra="3dp"
+            android:maxWidth="260dp"
+            android:minHeight="65dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="请放心收支付，支持支付宝、支付宝钱包、微信、QQ钱包、银联支付。支付宝中支持信用卡、存储借记卡等方式！"
+            android:textColor="@color/c_333333"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c_e2e2e2"
+            android:contentDescription="@null"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dialog_btn_ok"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:padding="12dp"
+                android:text="@string/update_now"
+                android:textColor="@drawable/slt_text_black_blue"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/imgLine"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/c_e2e2e2"
+                android:contentDescription="@null"/>
+
+            <Button
+                android:id="@+id/dialog_btn_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:padding="12dp"
+                android:text="@string/update_later"
+                android:textColor="@drawable/slt_text_black_blue"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

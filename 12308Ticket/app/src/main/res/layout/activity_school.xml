@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_style"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/layout_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:addStatesFromChildren="true"
+            android:clickable="true"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/imgLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:paddingLeft="15dp"
+                android:src="@drawable/slt_return_white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/shape_white"
+                android:drawableLeft="@mipmap/ic_search"
+                android:drawablePadding="5dp"
+                android:hint="@string/edit_search_school"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/imgBtnDel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_margin="8dp"
+                android:background="@null"
+                android:padding="12dp"
+                android:src="@mipmap/city_del"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+  <include layout="@layout/layout_loading"/>
+
+    <LinearLayout
+        android:id="@+id/ll_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="vertical">
+
+            <ImageView style="@style/split_line" />
+
+            <ListView
+                style="@style/listViewNoDivider"
+                android:divider="@color/c_dddddd"
+                android:dividerHeight="1px"
+                android:id="@+id/ls_school"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <com.myticket.wedgets.MyLetterView
+            android:id="@+id/ml_letter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/ls_search_school"
+        style="@style/listViewNoDivider"
+        android:divider="@color/c_dddddd"
+        android:dividerHeight="1px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_no_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dip"
+        android:textColor="@color/c_333333"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+</LinearLayout>

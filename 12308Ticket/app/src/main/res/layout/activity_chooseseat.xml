@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f0f0f0"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/title_bar_common"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/chooseseat_topbg"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_20px"
+            android:paddingLeft="@dimen/margin_24px"
+            android:paddingRight="@dimen/margin_24px"
+            android:paddingTop="@dimen/margin_20px"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_chooseseat_fromtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20px"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:text="08:05"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_36px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_chooseseat_fromstation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="深圳北"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_30px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:src="@mipmap/icon_fillinorder_arrow" />
+
+                    <TextView
+                        android:id="@+id/tv_chooseseat_traincode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/margin_6px"
+                        android:text="G1101"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_28px" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_chooseseat_runtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_6px"
+                    android:drawableLeft="@mipmap/icon_fillinorder_time"
+                    android:drawablePadding="@dimen/margin_6px"
+                    android:text="11:55"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_28px" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_chooseseat_totime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20px"
+                    android:text="08:05"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_36px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_chooseseat_tostation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="广州南"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_30px" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_f0f0f0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_chooseseat_preday"
+                style="@style/customTextView"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/line_up_month"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="6dp"
+                android:text="@string/date_prev_day"
+                android:textColor="@drawable/slt_line_day"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/line_line" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_chooseseat_currentday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:addStatesFromChildren="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/tv_chooseseat_curDay"
+                    style="@style/customTextView"
+                    android:drawableLeft="@mipmap/line_calader"
+                    android:text="09月12日"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/line_line" />
+
+            <TextView
+                android:id="@+id/tv_chooseseat_nextday"
+                style="@style/customTextView"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:drawableRight="@mipmap/line_next_month"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="6dp"
+                android:text="@string/date_next_day"
+                android:textColor="@drawable/slt_line_day"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+       style="@style/split_line"/>
+
+    <include layout="@layout/layout_loading"/>
+    <ListView
+        android:id="@+id/lv_chooseseat_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/c_f0f0f0"
+        android:dividerHeight="1dp"
+        android:scrollbars="none">
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/slt_city_hot"
+        android:gravity="center"
+        android:text="高铁"
+        android:textColor="@color/c_333333" />
+
+</LinearLayout>

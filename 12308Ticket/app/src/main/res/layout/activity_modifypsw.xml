@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="@dimen/margin_30px"
+        android:background="@drawable/bg_modifypsw"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pwd_old"
+                android:textColor="@color/c_666666"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_modifypsw_oldpsw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/pwd_hint"
+                android:inputType="textPassword"
+                android:maxLength="30"
+                android:textColor="@color/c_646464"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <ImageView
+            style="@style/split_line"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pwd_new"
+                android:textColor="@color/c_666666"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_modifypsw_newpsw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/pwd_hint"
+                android:inputType="textPassword"
+                android:maxLength="30"
+                android:textColor="@color/c_646464"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <ImageView
+            style="@style/split_line"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/re_pwd"
+                android:textColor="@color/c_666666"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_modifypsw_confirmpsw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/re_newpwd_required"
+                android:inputType="textPassword"
+                android:maxLength="30"
+                android:textColor="@color/c_646464"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_modifypsw_submit"
+        style="@style/customButton"
+        android:layout_margin="8dp"
+        android:text="保存"/>
+
+
+</LinearLayout>

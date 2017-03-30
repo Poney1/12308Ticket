@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_trainlist_container"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:descendantFocusability="beforeDescendants"
+              android:orientation="vertical">
+
+
+    <com.wxws.myticket.common.widgets.view.pull.PullToRefreshListView
+        android:id="@+id/ptr_trainorder_listview"
+        style="@style/customListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@color/c_ebebeb"
+        android:divider="@color/transparent"
+        android:dividerHeight="8dip"
+        android:listSelector="@color/transparent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderBackground="@color/transparent"
+        ptr:ptrHeaderSubTextColor="@color/app_style"
+        ptr:ptrHeaderTextColor="@color/app_style" />
+
+</LinearLayout>

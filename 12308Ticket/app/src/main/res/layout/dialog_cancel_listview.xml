@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rl_service"
+            android:layout_width="290dp"
+            android:layout_height="400dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_white">
+
+            <TextView
+                android:id="@+id/tv_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_space_side"
+                android:text="@string/nac_service_time1"
+                android:textColor="@color/c_666666"/>
+
+            <TextView
+                android:id="@+id/tv_des_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_des"
+                android:paddingLeft="@dimen/app_space_side"
+                android:text="@string/nac_service_time2"
+                android:textColor="@color/c_666666"/>
+            <ListView
+                android:id="@+id/ls_time"
+                style="@style/listViewNoDivider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_des_time"
+                android:paddingLeft="@dimen/app_space_side"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_url_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_service"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:background="@mipmap/bus_img_cancel"/>
+    </RelativeLayout>
+</RelativeLayout>

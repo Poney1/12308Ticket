@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f0f0f0"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common"/>
+
+    <include layout="@layout/common_line"/>
+
+    <RadioGroup
+        android:id="@+id/rg_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_30px"
+        android:layout_marginLeft="@dimen/margin_20px"
+        android:layout_marginRight="@dimen/margin_20px"
+        android:layout_marginTop="@dimen/margin_40px"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_feedback_suggest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_red_gray_selector"
+            android:drawablePadding="@dimen/margin_20px"
+            android:text="建议"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/textsize_30px"/>
+
+        <RadioButton
+            android:id="@+id/rb_feedback_complaint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_red_gray_selector"
+            android:drawablePadding="@dimen/margin_20px"
+            android:text="投诉"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/textsize_30px"/>
+
+    </RadioGroup>
+
+    <include layout="@layout/common_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <EditText
+            android:id="@+id/et_feedback_details"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:gravity="left|top"
+            android:hint="您的意见将有助于我们改进产品和保证服务质量!"
+            android:padding="@dimen/margin_20px"
+            android:textColor="@color/c_666666"
+            android:textColorHint="@color/c_999999"
+            android:textSize="@dimen/textsize_28px"/>
+
+        <TextView
+            android:id="@+id/tv_feedback_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/margin_20px"
+            android:text="0/200"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/textsize_28px"/>
+    </RelativeLayout>
+
+    <include layout="@layout/common_line"/>
+
+    <Button
+        android:id="@+id/bt_feedback_submit"
+        style="@style/customButton"
+        android:layout_marginLeft="@dimen/margin_20px"
+        android:layout_marginRight="@dimen/margin_20px"
+        android:layout_marginTop="@dimen/margin_80px"
+        android:text="提交"/>
+
+
+</LinearLayout>
